@@ -11,8 +11,6 @@
 		B45328F22A9CB90F006584AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45328F12A9CB90F006584AA /* ContentView.swift */; };
 		B45328F42A9CB911006584AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45328F32A9CB911006584AA /* Assets.xcassets */; };
 		B45328F72A9CB911006584AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45328F62A9CB911006584AA /* Preview Assets.xcassets */; };
-		B453290B2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453290A2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift */; };
-		B453290D2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453290C2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift */; };
 		B453291A2A9CBA2E006584AA /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45329192A9CBA2E006584AA /* CardModel.swift */; };
 		B453291C2A9CBA5B006584AA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291B2A9CBA5B006584AA /* APIService.swift */; };
 		B453291E2A9CBB29006584AA /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291D2A9CBB29006584AA /* CardListViewModel.swift */; };
@@ -48,8 +46,6 @@
 		B45328F62A9CB911006584AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B45328FC2A9CB911006584AA /* Master Duel Meta MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Master Duel Meta MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45329062A9CB911006584AA /* Master Duel Meta MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Master Duel Meta MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B453290A2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master_Duel_Meta_MobileUITests.swift; sourceTree = "<group>"; };
-		B453290C2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master_Duel_Meta_MobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B45329192A9CBA2E006584AA /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		B453291B2A9CBA5B006584AA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B453291D2A9CBB29006584AA /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 			children = (
 				B45328EE2A9CB90F006584AA /* YGOSearch */,
 				B45328FF2A9CB911006584AA /* YGOSearch Tests */,
-				B45329092A9CB911006584AA /* YGOSearch MobileUITests */,
 				B45328ED2A9CB90F006584AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,15 +132,6 @@
 				B457D3A72C2A654D002C004D /* CardListViewModelTests.swift */,
 			);
 			path = "YGOSearch Tests";
-			sourceTree = "<group>";
-		};
-		B45329092A9CB911006584AA /* YGOSearch MobileUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B453290A2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift */,
-				B453290C2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift */,
-			);
-			path = "YGOSearch MobileUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,8 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B453290B2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift in Sources */,
-				B453290D2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
