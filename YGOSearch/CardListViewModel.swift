@@ -1,6 +1,6 @@
 //
 //  CardListViewModel.swift
-//  Master Duel Meta Mobile
+//  YGOSearch
 //
 //  Created by Efe Demir on 8/28/23.
 //

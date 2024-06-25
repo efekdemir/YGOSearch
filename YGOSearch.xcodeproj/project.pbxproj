@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B45328EC2A9CB90F006584AA /* Master Duel Meta Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master Duel Meta Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45328EC2A9CB90F006584AA /* YGOSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGOSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45328EF2A9CB90F006584AA /* YGOSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOSearch.swift; sourceTree = "<group>"; };
 		B45328F12A9CB90F006584AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B45328F32A9CB911006584AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45328F62A9CB911006584AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B45328FC2A9CB911006584AA /* Master Duel Meta MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Master Duel Meta MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B45329062A9CB911006584AA /* Master Duel Meta MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Master Duel Meta MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45328FC2A9CB911006584AA /* YGOSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YGOSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45329062A9CB911006584AA /* YGOSearch UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YGOSearch UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45329192A9CBA2E006584AA /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		B453291B2A9CBA5B006584AA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B453291D2A9CBB29006584AA /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 		B45328ED2A9CB90F006584AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B45328EC2A9CB90F006584AA /* Master Duel Meta Mobile.app */,
-				B45328FC2A9CB911006584AA /* Master Duel Meta MobileTests.xctest */,
-				B45329062A9CB911006584AA /* Master Duel Meta MobileUITests.xctest */,
+				B45328EC2A9CB90F006584AA /* YGOSearch.app */,
+				B45328FC2A9CB911006584AA /* YGOSearchTests.xctest */,
+				B45329062A9CB911006584AA /* YGOSearch UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */ = {
+		B45328EB2A9CB90F006584AA /* YGOSearch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B45329102A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta Mobile" */;
+			buildConfigurationList = B45329102A9CB911006584AA /* Build configuration list for PBXNativeTarget "YGOSearch" */;
 			buildPhases = (
 				B45328E82A9CB90F006584AA /* Sources */,
 				B45328E92A9CB90F006584AA /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = "Master Duel Meta Mobile";
+			name = YGOSearch;
 			productName = "Master Duel Meta Mobile";
-			productReference = B45328EC2A9CB90F006584AA /* Master Duel Meta Mobile.app */;
+			productReference = B45328EC2A9CB90F006584AA /* YGOSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B45328FB2A9CB911006584AA /* Master Duel Meta MobileTests */ = {
+		B45328FB2A9CB911006584AA /* YGOSearchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B45329132A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileTests" */;
+			buildConfigurationList = B45329132A9CB911006584AA /* Build configuration list for PBXNativeTarget "YGOSearchTests" */;
 			buildPhases = (
 				B45328F82A9CB911006584AA /* Sources */,
 				B45328F92A9CB911006584AA /* Frameworks */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				B45328FE2A9CB911006584AA /* PBXTargetDependency */,
 			);
-			name = "Master Duel Meta MobileTests";
+			name = YGOSearchTests;
 			productName = "Master Duel Meta MobileTests";
-			productReference = B45328FC2A9CB911006584AA /* Master Duel Meta MobileTests.xctest */;
+			productReference = B45328FC2A9CB911006584AA /* YGOSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B45329052A9CB911006584AA /* Master Duel Meta MobileUITests */ = {
+		B45329052A9CB911006584AA /* YGOSearch UI Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B45329162A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileUITests" */;
+			buildConfigurationList = B45329162A9CB911006584AA /* Build configuration list for PBXNativeTarget "YGOSearch UI Tests" */;
 			buildPhases = (
 				B45329022A9CB911006584AA /* Sources */,
 				B45329032A9CB911006584AA /* Frameworks */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				B45329082A9CB911006584AA /* PBXTargetDependency */,
 			);
-			name = "Master Duel Meta MobileUITests";
+			name = "YGOSearch UI Tests";
 			productName = "Master Duel Meta MobileUITests";
-			productReference = B45329062A9CB911006584AA /* Master Duel Meta MobileUITests.xctest */;
+			productReference = B45329062A9CB911006584AA /* YGOSearch UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -226,9 +226,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */,
-				B45328FB2A9CB911006584AA /* Master Duel Meta MobileTests */,
-				B45329052A9CB911006584AA /* Master Duel Meta MobileUITests */,
+				B45328EB2A9CB90F006584AA /* YGOSearch */,
+				B45328FB2A9CB911006584AA /* YGOSearchTests */,
+				B45329052A9CB911006584AA /* YGOSearch UI Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,12 +296,12 @@
 /* Begin PBXTargetDependency section */
 		B45328FE2A9CB911006584AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */;
+			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
 			targetProxy = B45328FD2A9CB911006584AA /* PBXContainerItemProxy */;
 		};
 		B45329082A9CB911006584AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */;
+			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
 			targetProxy = B45329072A9CB911006584AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -431,8 +431,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YGOSearch/Preview Content\"";
+				DEVELOPMENT_TEAM = YFC6V8ZQ63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "YGO Search";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -443,7 +446,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-Mobile";
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.YGOSearch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -459,8 +462,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YGOSearch/Preview Content\"";
+				DEVELOPMENT_TEAM = YFC6V8ZQ63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "YGO Search";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -471,7 +477,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-Mobile";
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.YGOSearch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -493,7 +499,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Master Duel Meta Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Master Duel Meta Mobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YGOSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YGOSearch";
 			};
 			name = Debug;
 		};
@@ -511,7 +517,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Master Duel Meta Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Master Duel Meta Mobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YGOSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YGOSearch";
 			};
 			name = Release;
 		};
@@ -559,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B45329102A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta Mobile" */ = {
+		B45329102A9CB911006584AA /* Build configuration list for PBXNativeTarget "YGOSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B45329112A9CB911006584AA /* Debug */,
@@ -568,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B45329132A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileTests" */ = {
+		B45329132A9CB911006584AA /* Build configuration list for PBXNativeTarget "YGOSearchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B45329142A9CB911006584AA /* Debug */,
@@ -577,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B45329162A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileUITests" */ = {
+		B45329162A9CB911006584AA /* Build configuration list for PBXNativeTarget "YGOSearch UI Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B45329172A9CB911006584AA /* Debug */,

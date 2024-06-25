@@ -1,6 +1,6 @@
 //
 //  CardListViewModelTests.swift
-//  Master Duel Meta MobileTests
+//  YGOSearch Tests
 //
 //  Created by Efe Demir on 6/24/24.
 //

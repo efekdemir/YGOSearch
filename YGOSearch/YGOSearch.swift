@@ -1,6 +1,6 @@
 //
-//  Master_Duel_Meta_MobileApp.swift
-//  Master Duel Meta Mobile
+//  YGOSearch.swift
+//  YGOSearch
 //
 //  Created by Efe Demir on 8/28/23.
 //

@@ -1,6 +1,6 @@
 //
 //  MockData.swift
-//  Master Duel Meta Mobile
+//  YGOSearch
 //
 //  Created by Efe Demir on 6/14/24.
 //
