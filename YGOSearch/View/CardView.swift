@@ -42,14 +42,13 @@ struct CardView: View {
                     .padding()
             }
         }
-        .sheet(isPresented: $shouldPresentSheet) {  // Attach the sheet modifier here
-            // Sheet content
+        .sheet(isPresented: $shouldPresentSheet) {
             if let fullImageUrl = URL(string: card.card_images.first?.image_url ?? "") {
                 AsyncImage(url: fullImageUrl) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .edgesIgnoringSafeArea(.all)  // Optional: Allow the image to fill the entire screen area
+                        .edgesIgnoringSafeArea(.all)
                 } placeholder: {
                     ProgressView()
                 }

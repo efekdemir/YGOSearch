@@ -14,6 +14,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Text("YGO Search")
+                    .font(.title)
+                    .bold()
                 TextField("Search", text: $searchText, onCommit: {
                     viewModel.loadCardData(searchText)
                 })
@@ -34,12 +37,9 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                 }
             }
-            .navigationTitle(Text("YGO Search"))
         }
     }
 }
-
-
 
 #Preview {
     ContentView()
