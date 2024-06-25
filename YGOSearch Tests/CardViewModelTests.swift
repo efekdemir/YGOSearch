@@ -9,15 +9,15 @@ import XCTest
 @testable import YGOSearch
 import Combine
 
-class CardListViewModelTests: XCTestCase {
-    var sut: CardListViewModel!
+class CardViewModelTests: XCTestCase {
+    var sut: CardViewModel!
     var mockAPIService: MockAPIService!
     var cancellables: Set<AnyCancellable>!
 
     override func setUp() {
         super.setUp()
         mockAPIService = MockAPIService()
-        sut = CardListViewModel(apiService: mockAPIService)
+        sut = CardViewModel(apiService: mockAPIService)
         cancellables = []
     }
 

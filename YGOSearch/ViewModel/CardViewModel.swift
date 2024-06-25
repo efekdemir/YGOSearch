@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class CardListViewModel: ObservableObject {
+class CardViewModel: ObservableObject {
     @Published var card: CardModel?
     @Published var errorMessage: String?
     private var cancellables = Set<AnyCancellable>()

@@ -3,22 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B45328F02A9CB90F006584AA /* YGOSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45328EF2A9CB90F006584AA /* YGOSearch.swift */; };
-		B45328F22A9CB90F006584AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45328F12A9CB90F006584AA /* ContentView.swift */; };
 		B45328F42A9CB911006584AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45328F32A9CB911006584AA /* Assets.xcassets */; };
 		B45328F72A9CB911006584AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45328F62A9CB911006584AA /* Preview Assets.xcassets */; };
-		B453291A2A9CBA2E006584AA /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45329192A9CBA2E006584AA /* CardModel.swift */; };
 		B453291C2A9CBA5B006584AA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291B2A9CBA5B006584AA /* APIService.swift */; };
-		B453291E2A9CBB29006584AA /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291D2A9CBB29006584AA /* CardListViewModel.swift */; };
-		B45329202A9CBD94006584AA /* SampleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291F2A9CBD94006584AA /* SampleCard.swift */; };
-		B457D3A22C2A1AFF002C004D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A12C2A1AFB002C004D /* MockData.swift */; };
-		B457D3A42C2A2479002C004D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A32C2A2479002C004D /* CardView.swift */; };
 		B457D3A62C2A5F65002C004D /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A52C2A5F65002C004D /* APIServiceTests.swift */; };
-		B457D3A82C2A654D002C004D /* CardListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A72C2A654D002C004D /* CardListViewModelTests.swift */; };
+		B457D3A82C2A654D002C004D /* CardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A72C2A654D002C004D /* CardViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,20 +35,54 @@
 /* Begin PBXFileReference section */
 		B45328EC2A9CB90F006584AA /* YGOSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGOSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45328EF2A9CB90F006584AA /* YGOSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOSearch.swift; sourceTree = "<group>"; };
-		B45328F12A9CB90F006584AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B45328F32A9CB911006584AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45328F62A9CB911006584AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B45328FC2A9CB911006584AA /* YGOSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YGOSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45329062A9CB911006584AA /* YGOSearch UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YGOSearch UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B45329192A9CBA2E006584AA /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		B453291B2A9CBA5B006584AA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		B453291D2A9CBB29006584AA /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
-		B453291F2A9CBD94006584AA /* SampleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCard.swift; sourceTree = "<group>"; };
-		B457D3A12C2A1AFB002C004D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		B457D3A32C2A2479002C004D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B457D3A52C2A5F65002C004D /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
-		B457D3A72C2A654D002C004D /* CardListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTests.swift; sourceTree = "<group>"; };
+		B457D3A72C2A654D002C004D /* CardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B447E6272C2B7BA6003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CardModel.swift,
+			);
+			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
+		};
+		B447E6292C2B7BBB003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CardView.swift,
+				ContentView.swift,
+			);
+			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
+		};
+		B447E62C2C2B7BE3003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MockData.swift,
+				SampleCard.swift,
+			);
+			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
+		};
+		B447E62E2C2B7C34003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CardViewModel.swift,
+			);
+			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B447E6262C2B7BA1003998B3 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E6272C2B7BA6003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+		B447E6282C2B7BB8003998B3 /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E6292C2B7BBB003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
+		B447E62B2C2B7BDD003998B3 /* Mocks */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E62C2C2B7BE3003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Mocks; sourceTree = "<group>"; };
+		B447E62D2C2B7C2D003998B3 /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E62E2C2B7C34003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B45328E92A9CB90F006584AA /* Frameworks */ = {
@@ -104,13 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				B45328EF2A9CB90F006584AA /* YGOSearch.swift */,
-				B45329192A9CBA2E006584AA /* CardModel.swift */,
-				B453291F2A9CBD94006584AA /* SampleCard.swift */,
 				B453291B2A9CBA5B006584AA /* APIService.swift */,
-				B45328F12A9CB90F006584AA /* ContentView.swift */,
-				B457D3A32C2A2479002C004D /* CardView.swift */,
-				B453291D2A9CBB29006584AA /* CardListViewModel.swift */,
-				B457D3A12C2A1AFB002C004D /* MockData.swift */,
+				B447E62D2C2B7C2D003998B3 /* ViewModel */,
+				B447E62B2C2B7BDD003998B3 /* Mocks */,
+				B447E6282C2B7BB8003998B3 /* View */,
+				B447E6262C2B7BA1003998B3 /* Model */,
 				B45328F32A9CB911006584AA /* Assets.xcassets */,
 				B45328F52A9CB911006584AA /* Preview Content */,
 			);
@@ -129,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				B457D3A52C2A5F65002C004D /* APIServiceTests.swift */,
-				B457D3A72C2A654D002C004D /* CardListViewModelTests.swift */,
+				B457D3A72C2A654D002C004D /* CardViewModelTests.swift */,
 			);
 			path = "YGOSearch Tests";
 			sourceTree = "<group>";
@@ -264,14 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B453291E2A9CBB29006584AA /* CardListViewModel.swift in Sources */,
-				B45328F22A9CB90F006584AA /* ContentView.swift in Sources */,
 				B45328F02A9CB90F006584AA /* YGOSearch.swift in Sources */,
-				B45329202A9CBD94006584AA /* SampleCard.swift in Sources */,
 				B453291C2A9CBA5B006584AA /* APIService.swift in Sources */,
-				B457D3A22C2A1AFF002C004D /* MockData.swift in Sources */,
-				B457D3A42C2A2479002C004D /* CardView.swift in Sources */,
-				B453291A2A9CBA2E006584AA /* CardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B457D3A82C2A654D002C004D /* CardListViewModelTests.swift in Sources */,
+				B457D3A82C2A654D002C004D /* CardViewModelTests.swift in Sources */,
 				B457D3A62C2A5F65002C004D /* APIServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

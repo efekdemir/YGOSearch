@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel = CardListViewModel()
+    @ObservedObject var viewModel = CardViewModel()
     @State private var searchText = ""
 
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Search for a card", text: $searchText, onCommit: {
+                TextField("Search", text: $searchText, onCommit: {
                     viewModel.loadCardData(searchText)
                 })
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
                 Text("Name must be correctly written (i.e. Blue-Eyes White Dragon)")
                     .font(.footnote)
+                    .foregroundColor(.gray)
+                    .padding(.bottom)
 
                 if let card = viewModel.card {
                     CardView(card: card)
@@ -28,15 +30,11 @@ struct ContentView: View {
                     Text(errorMessage)
                         .foregroundColor(.red)
                 } else {
-                    Text("Search for a Yu-Gi-Oh card")
+                    Text("Search for a card")
                         .foregroundColor(.gray)
                 }
             }
-            .navigationTitle(
-                Text("Yu-Gi-Oh! Card Searcher")
-                    .bold()
-                    .font(.headline)
-            )
+            .navigationTitle(Text("YGO Search"))
         }
     }
 }
