@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B45328F02A9CB90F006584AA /* YGOSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45328EF2A9CB90F006584AA /* YGOSearch.swift */; };
+		B45328F22A9CB90F006584AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45328F12A9CB90F006584AA /* ContentView.swift */; };
+		B45328F42A9CB911006584AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45328F32A9CB911006584AA /* Assets.xcassets */; };
+		B45328F72A9CB911006584AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45328F62A9CB911006584AA /* Preview Assets.xcassets */; };
+		B453290B2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453290A2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift */; };
+		B453290D2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453290C2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift */; };
+		B453291A2A9CBA2E006584AA /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45329192A9CBA2E006584AA /* CardModel.swift */; };
+		B453291C2A9CBA5B006584AA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291B2A9CBA5B006584AA /* APIService.swift */; };
+		B453291E2A9CBB29006584AA /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291D2A9CBB29006584AA /* CardListViewModel.swift */; };
+		B45329202A9CBD94006584AA /* SampleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291F2A9CBD94006584AA /* SampleCard.swift */; };
+		B457D3A22C2A1AFF002C004D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A12C2A1AFB002C004D /* MockData.swift */; };
+		B457D3A42C2A2479002C004D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A32C2A2479002C004D /* CardView.swift */; };
+		B457D3A62C2A5F65002C004D /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A52C2A5F65002C004D /* APIServiceTests.swift */; };
+		B457D3A82C2A654D002C004D /* CardListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A72C2A654D002C004D /* CardListViewModelTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B45328FD2A9CB911006584AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B45328E42A9CB90F006584AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45328EB2A9CB90F006584AA;
+			remoteInfo = "Master Duel Meta Mobile";
+		};
+		B45329072A9CB911006584AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B45328E42A9CB90F006584AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45328EB2A9CB90F006584AA;
+			remoteInfo = "Master Duel Meta Mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B45328EC2A9CB90F006584AA /* Master Duel Meta Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master Duel Meta Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45328EF2A9CB90F006584AA /* YGOSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOSearch.swift; sourceTree = "<group>"; };
+		B45328F12A9CB90F006584AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B45328F32A9CB911006584AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B45328F62A9CB911006584AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B45328FC2A9CB911006584AA /* Master Duel Meta MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Master Duel Meta MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45329062A9CB911006584AA /* Master Duel Meta MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Master Duel Meta MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B453290A2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master_Duel_Meta_MobileUITests.swift; sourceTree = "<group>"; };
+		B453290C2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master_Duel_Meta_MobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B45329192A9CBA2E006584AA /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		B453291B2A9CBA5B006584AA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B453291D2A9CBB29006584AA /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
+		B453291F2A9CBD94006584AA /* SampleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCard.swift; sourceTree = "<group>"; };
+		B457D3A12C2A1AFB002C004D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		B457D3A32C2A2479002C004D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B457D3A52C2A5F65002C004D /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		B457D3A72C2A654D002C004D /* CardListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B45328E92A9CB90F006584AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45328F92A9CB911006584AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45329032A9CB911006584AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B45328E32A9CB90F006584AA = {
+			isa = PBXGroup;
+			children = (
+				B45328EE2A9CB90F006584AA /* YGOSearch */,
+				B45328FF2A9CB911006584AA /* YGOSearch Tests */,
+				B45329092A9CB911006584AA /* YGOSearch MobileUITests */,
+				B45328ED2A9CB90F006584AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B45328ED2A9CB90F006584AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B45328EC2A9CB90F006584AA /* Master Duel Meta Mobile.app */,
+				B45328FC2A9CB911006584AA /* Master Duel Meta MobileTests.xctest */,
+				B45329062A9CB911006584AA /* Master Duel Meta MobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B45328EE2A9CB90F006584AA /* YGOSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B45328EF2A9CB90F006584AA /* YGOSearch.swift */,
+				B45329192A9CBA2E006584AA /* CardModel.swift */,
+				B453291F2A9CBD94006584AA /* SampleCard.swift */,
+				B453291B2A9CBA5B006584AA /* APIService.swift */,
+				B45328F12A9CB90F006584AA /* ContentView.swift */,
+				B457D3A32C2A2479002C004D /* CardView.swift */,
+				B453291D2A9CBB29006584AA /* CardListViewModel.swift */,
+				B457D3A12C2A1AFB002C004D /* MockData.swift */,
+				B45328F32A9CB911006584AA /* Assets.xcassets */,
+				B45328F52A9CB911006584AA /* Preview Content */,
+			);
+			path = YGOSearch;
+			sourceTree = "<group>";
+		};
+		B45328F52A9CB911006584AA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B45328F62A9CB911006584AA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B45328FF2A9CB911006584AA /* YGOSearch Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B457D3A52C2A5F65002C004D /* APIServiceTests.swift */,
+				B457D3A72C2A654D002C004D /* CardListViewModelTests.swift */,
+			);
+			path = "YGOSearch Tests";
+			sourceTree = "<group>";
+		};
+		B45329092A9CB911006584AA /* YGOSearch MobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B453290A2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift */,
+				B453290C2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift */,
+			);
+			path = "YGOSearch MobileUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45329102A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta Mobile" */;
+			buildPhases = (
+				B45328E82A9CB90F006584AA /* Sources */,
+				B45328E92A9CB90F006584AA /* Frameworks */,
+				B45328EA2A9CB90F006584AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Master Duel Meta Mobile";
+			productName = "Master Duel Meta Mobile";
+			productReference = B45328EC2A9CB90F006584AA /* Master Duel Meta Mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B45328FB2A9CB911006584AA /* Master Duel Meta MobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45329132A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileTests" */;
+			buildPhases = (
+				B45328F82A9CB911006584AA /* Sources */,
+				B45328F92A9CB911006584AA /* Frameworks */,
+				B45328FA2A9CB911006584AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B45328FE2A9CB911006584AA /* PBXTargetDependency */,
+			);
+			name = "Master Duel Meta MobileTests";
+			productName = "Master Duel Meta MobileTests";
+			productReference = B45328FC2A9CB911006584AA /* Master Duel Meta MobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B45329052A9CB911006584AA /* Master Duel Meta MobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45329162A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileUITests" */;
+			buildPhases = (
+				B45329022A9CB911006584AA /* Sources */,
+				B45329032A9CB911006584AA /* Frameworks */,
+				B45329042A9CB911006584AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B45329082A9CB911006584AA /* PBXTargetDependency */,
+			);
+			name = "Master Duel Meta MobileUITests";
+			productName = "Master Duel Meta MobileUITests";
+			productReference = B45329062A9CB911006584AA /* Master Duel Meta MobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B45328E42A9CB90F006584AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					B45328EB2A9CB90F006584AA = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B45328FB2A9CB911006584AA = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B45328EB2A9CB90F006584AA;
+					};
+					B45329052A9CB911006584AA = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B45328EB2A9CB90F006584AA;
+					};
+				};
+			};
+			buildConfigurationList = B45328E72A9CB90F006584AA /* Build configuration list for PBXProject "YGOSearch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B45328E32A9CB90F006584AA;
+			productRefGroup = B45328ED2A9CB90F006584AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */,
+				B45328FB2A9CB911006584AA /* Master Duel Meta MobileTests */,
+				B45329052A9CB911006584AA /* Master Duel Meta MobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B45328EA2A9CB90F006584AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45328F72A9CB911006584AA /* Preview Assets.xcassets in Resources */,
+				B45328F42A9CB911006584AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45328FA2A9CB911006584AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45329042A9CB911006584AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B45328E82A9CB90F006584AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B453291E2A9CBB29006584AA /* CardListViewModel.swift in Sources */,
+				B45328F22A9CB90F006584AA /* ContentView.swift in Sources */,
+				B45328F02A9CB90F006584AA /* YGOSearch.swift in Sources */,
+				B45329202A9CBD94006584AA /* SampleCard.swift in Sources */,
+				B453291C2A9CBA5B006584AA /* APIService.swift in Sources */,
+				B457D3A22C2A1AFF002C004D /* MockData.swift in Sources */,
+				B457D3A42C2A2479002C004D /* CardView.swift in Sources */,
+				B453291A2A9CBA2E006584AA /* CardModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45328F82A9CB911006584AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B457D3A82C2A654D002C004D /* CardListViewModelTests.swift in Sources */,
+				B457D3A62C2A5F65002C004D /* APIServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45329022A9CB911006584AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B453290B2A9CB911006584AA /* Master_Duel_Meta_MobileUITests.swift in Sources */,
+				B453290D2A9CB911006584AA /* Master_Duel_Meta_MobileUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B45328FE2A9CB911006584AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */;
+			targetProxy = B45328FD2A9CB911006584AA /* PBXContainerItemProxy */;
+		};
+		B45329082A9CB911006584AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45328EB2A9CB90F006584AA /* Master Duel Meta Mobile */;
+			targetProxy = B45329072A9CB911006584AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B453290E2A9CB911006584AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B453290F2A9CB911006584AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B45329112A9CB911006584AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"YGOSearch/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B45329122A9CB911006584AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"YGOSearch/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B45329142A9CB911006584AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Master Duel Meta Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Master Duel Meta Mobile";
+			};
+			name = Debug;
+		};
+		B45329152A9CB911006584AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Master Duel Meta Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Master Duel Meta Mobile";
+			};
+			name = Release;
+		};
+		B45329172A9CB911006584AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Master Duel Meta Mobile";
+			};
+			name = Debug;
+		};
+		B45329182A9CB911006584AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.Master-Duel-Meta-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Master Duel Meta Mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B45328E72A9CB90F006584AA /* Build configuration list for PBXProject "YGOSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B453290E2A9CB911006584AA /* Debug */,
+				B453290F2A9CB911006584AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45329102A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45329112A9CB911006584AA /* Debug */,
+				B45329122A9CB911006584AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45329132A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45329142A9CB911006584AA /* Debug */,
+				B45329152A9CB911006584AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45329162A9CB911006584AA /* Build configuration list for PBXNativeTarget "Master Duel Meta MobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45329172A9CB911006584AA /* Debug */,
+				B45329182A9CB911006584AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B45328E42A9CB90F006584AA /* Project object */;
+}
