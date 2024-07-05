@@ -18,7 +18,7 @@ struct CardModel: Codable {
     var def: Int?
     var level: Int?
     var race: String
-    var attribute: String
+    var attribute: String?
     var archetype: String?
     var ygoprodeck_url: String?
     var card_sets: [CardSet]

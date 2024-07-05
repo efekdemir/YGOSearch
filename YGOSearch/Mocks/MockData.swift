@@ -6,6 +6,45 @@
 //
 
 struct MockCardData {
+    static let jarOfGreed = """
+        {
+          "id": 83968380,
+          "name": "Jar of Greed",
+          "type": "Trap Card",
+          "frameType": "trap",
+          "desc": "Draw 1 card.",
+          "race": "Normal",
+          "archetype": "Greed",
+          "ygoprodeck_url": "https://ygoprodeck.com/card/jar-of-greed-7039",
+          "card_sets": [
+            {
+              "set_name": "Dark Beginning 1",
+              "set_code": "DB1-EN242",
+              "set_rarity": "Rare",
+              "set_rarity_code": "(R)",
+              "set_price": "0"
+            },
+          ],
+          "card_images": [
+            {
+              "id": 83968380,
+              "image_url": "https://images.ygoprodeck.com/images/cards/83968380.jpg",
+              "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83968380.jpg",
+              "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83968380.jpg"
+            }
+          ],
+          "card_prices": [
+            {
+              "cardmarket_price": "0.80",
+              "tcgplayer_price": "1.40",
+              "ebay_price": "3.95",
+              "amazon_price": "3.05",
+              "coolstuffinc_price": "1.99"
+            }
+          ]
+        }
+    """
+    
     static let blueEyesWhiteDragon = """
     {
         "id": 89631139,

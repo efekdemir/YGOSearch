@@ -12,7 +12,7 @@ struct CardView: View {
     @State private var shouldPresentSheet = false
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 Text(card.name)
                     .font(.title)
                 Text(card.type)
@@ -32,14 +32,18 @@ struct CardView: View {
                 }
                 Text("Tap image to see original card")
                     .font(.footnote)
-                HStack {
-                    Text("ATK: \(card.atk ?? 0)")
-                        .bold()
-                    Text("DEF: \(card.def ?? 0)")
-                        .bold()
+                CardTextView(text: card.desc)
+                
+                HStack() {
+                    if let atk = card.atk {
+                        Text("ATK: \(atk)")
+                            .bold()
+                    }
+                    if let def = card.def {
+                        Text("DEF: \(def)")
+                            .bold()
+                    }
                 }
-                Text(card.desc)
-                    .padding()
             }
         }
         .sheet(isPresented: $shouldPresentSheet) {
