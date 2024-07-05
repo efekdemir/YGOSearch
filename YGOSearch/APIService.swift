@@ -17,7 +17,7 @@ class APIService {
                 fatalError("Invalid URL")
             }
         
-//            print("url string: " + url.absoluteString)
+            print("url string: " + url.absoluteString)
             
             return URLSession.shared.dataTaskPublisher(for: url)
                 .map(\.data)
