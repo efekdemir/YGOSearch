@@ -9,7 +9,7 @@ struct ApiResponse: Codable {
     var data: [CardModel]
 }
 
-struct CardModel: Codable {
+struct CardModel: Identifiable, Codable {
     var id: Int
     var name: String
     var type: String

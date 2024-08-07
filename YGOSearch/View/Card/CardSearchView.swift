@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CardSearchView: View {
     @ObservedObject var viewModel = CardViewModel()
     @State private var searchText = ""
 
@@ -42,5 +42,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CardSearchView()
 }
