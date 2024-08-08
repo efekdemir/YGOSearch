@@ -119,8 +119,8 @@
 		B45328E32A9CB90F006584AA = {
 			isa = PBXGroup;
 			children = (
-				B45328EE2A9CB90F006584AA /* YGOSearch */,
-				B45328FF2A9CB911006584AA /* YGOSearch Tests */,
+				B45328EE2A9CB90F006584AA /* YGO Search */,
+				B45328FF2A9CB911006584AA /* YGO Search Tests */,
 				B45328ED2A9CB90F006584AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,7 +135,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B45328EE2A9CB90F006584AA /* YGOSearch */ = {
+		B45328EE2A9CB90F006584AA /* YGO Search */ = {
 			isa = PBXGroup;
 			children = (
 				B45328EF2A9CB90F006584AA /* YGOSearch.swift */,
@@ -147,7 +147,7 @@
 				B45328F32A9CB911006584AA /* Assets.xcassets */,
 				B45328F52A9CB911006584AA /* Preview Content */,
 			);
-			path = YGOSearch;
+			path = "YGO Search";
 			sourceTree = "<group>";
 		};
 		B45328F52A9CB911006584AA /* Preview Content */ = {
@@ -158,13 +158,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B45328FF2A9CB911006584AA /* YGOSearch Tests */ = {
+		B45328FF2A9CB911006584AA /* YGO Search Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B457D3A52C2A5F65002C004D /* APIServiceTests.swift */,
 				B457D3A72C2A654D002C004D /* CardViewModelTests.swift */,
 			);
-			path = "YGOSearch Tests";
+			path = "YGO Search Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B45328E72A9CB90F006584AA /* Build configuration list for PBXProject "YGOSearch" */;
+			buildConfigurationList = B45328E72A9CB90F006584AA /* Build configuration list for PBXProject "YGO Search" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -583,7 +583,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B45328E72A9CB90F006584AA /* Build configuration list for PBXProject "YGOSearch" */ = {
+		B45328E72A9CB90F006584AA /* Build configuration list for PBXProject "YGO Search" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B453290E2A9CB911006584AA /* Debug */,

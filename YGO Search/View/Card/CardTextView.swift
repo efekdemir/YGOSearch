@@ -1,6 +1,6 @@
 //
 //  CardTextView.swift
-//  YGOSearch
+//  YGO Search
 //
 //  Created by Efe Demir on 7/4/24.
 //

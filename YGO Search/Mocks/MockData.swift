@@ -1,6 +1,6 @@
 //
 //  MockData.swift
-//  YGOSearch
+//  YGO Search
 //
 //  Created by Efe Demir on 6/14/24.
 //

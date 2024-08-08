@@ -1,6 +1,6 @@
 //
 //  DeckViewModel.swift
-//  YGOSearch
+//  YGO Search
 //
 //  Created by Efe Demir on 8/7/24.
 //

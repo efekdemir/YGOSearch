@@ -1,6 +1,6 @@
 //
 //  APIServiceTests.swift
-//  YGOSearch Tests
+//  YGO Search Tests
 //
 //  Created by Efe Demir on 6/24/24.
 //

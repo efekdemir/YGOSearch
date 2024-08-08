@@ -1,6 +1,6 @@
 //
-//  YGOSearch.swift
-//  YGOSearch
+//  YGO Search.swift
+//  YGO Search
 //
 //  Created by Efe Demir on 8/28/23.
 //

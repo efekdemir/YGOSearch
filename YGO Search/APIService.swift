@@ -1,6 +1,6 @@
 //
 //  APIService.swift
-//  YGOSearch
+//  YGO Search
 //
 //  Created by Efe Demir on 8/28/23.
 //
