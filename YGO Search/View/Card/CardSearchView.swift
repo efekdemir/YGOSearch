@@ -14,7 +14,7 @@ struct CardSearchView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("YGO Search")
+                Text("Card Search")
                     .font(.title)
                     .bold()
                 TextField("Search", text: $searchText, onCommit: {
@@ -22,18 +22,18 @@ struct CardSearchView: View {
                 })
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-                Text("Name must be correctly written (i.e. Blue-Eyes White Dragon)")
+                Text("Name must be correctly written")
                     .font(.footnote)
                     .foregroundColor(.gray)
                     .padding(.bottom)
 
                 if let card = viewModel.card {
-                    CardView(card: card)
+                    CardDetailView(card: card)
                 } else if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
                         .foregroundColor(.red)
                 } else {
-                    Text("Search for a card")
+                    Text("Try: Blue-Eyes White Dragon")
                         .foregroundColor(.gray)
                 }
             }
