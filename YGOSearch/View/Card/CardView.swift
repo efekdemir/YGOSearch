@@ -9,7 +9,8 @@ import SwiftUI
 struct CardView: View {
     var card: CardModel
 
-    @State private var shouldPresentSheet = false
+    @State private var shouldPresentImageSheet = false
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
@@ -22,9 +23,9 @@ struct CardView: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 300, maxHeight: 300)
+//                            .frame(maxWidth: 300, maxHeight: 300)
                             .onTapGesture {
-                                shouldPresentSheet = true
+                                shouldPresentImageSheet = true
                             }
                     } placeholder: {
                         ProgressView()
@@ -46,7 +47,7 @@ struct CardView: View {
                 }
             }
         }
-        .sheet(isPresented: $shouldPresentSheet) {
+        .sheet(isPresented: $shouldPresentImageSheet) {
             if let fullImageUrl = URL(string: card.card_images.first?.image_url ?? "") {
                 AsyncImage(url: fullImageUrl) { image in
                     image
