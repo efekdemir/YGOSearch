@@ -55,9 +55,10 @@
 		B447E6292C2B7BBB003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				CardTextView.swift,
-				CardView.swift,
-				ContentView.swift,
+				Card/CardSearchView.swift,
+				Card/CardTextView.swift,
+				Card/CardView.swift,
+				MainMenuView.swift,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
 		};
