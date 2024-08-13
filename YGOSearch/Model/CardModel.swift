@@ -9,7 +9,7 @@ struct ApiResponse: Codable {
     var data: [CardModel]
 }
 
-struct CardModel: Codable {
+struct CardModel: Codable, Identifiable {
     var id: Int
     var name: String
     var type: String
@@ -21,7 +21,7 @@ struct CardModel: Codable {
     var attribute: String?
     var archetype: String?
     var ygoprodeck_url: String?
-    var card_sets: [CardSet]
+    var card_sets: [CardSet]?
     var card_images: [CardImage]
     var card_prices: [CardPrice]
 

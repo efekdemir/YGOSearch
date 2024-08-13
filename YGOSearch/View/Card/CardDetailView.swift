@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct CardView: View {
+struct CardDetailView: View {
     var card: CardModel
 
     @State private var shouldPresentImageSheet = false
@@ -23,7 +23,6 @@ struct CardView: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-//                            .frame(maxWidth: 300, maxHeight: 300)
                             .onTapGesture {
                                 shouldPresentImageSheet = true
                             }
