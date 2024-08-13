@@ -14,7 +14,7 @@ struct MainMenuView: View {
         NavigationView {
             GeometryReader { geometry in
                 VStack {
-                    Image("YGOSearch")
+                    Image("ygo")
                         .resizable()
                         .scaledToFit()
                         .padding()
