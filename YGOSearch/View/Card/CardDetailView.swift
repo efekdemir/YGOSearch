@@ -8,9 +8,8 @@ import SwiftUI
 
 struct CardDetailView: View {
     var card: CardModel
-
+    @State private var selectedImageIndex = 0
     @State private var shouldPresentImageSheet = false
-    
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
@@ -18,23 +17,34 @@ struct CardDetailView: View {
                     .font(.title)
                 Text(card.type)
                     .font(.subheadline)
-                if let imageUrl = URL(string: card.card_images.first?.image_url_cropped ?? "") {
-                    AsyncImage(url: imageUrl) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .onTapGesture {
-                                shouldPresentImageSheet = true
+
+                // Image gallery
+                TabView(selection: $selectedImageIndex) {
+                    ForEach(card.card_images.indices, id: \.self) { index in
+                        if let imageUrl = URL(string: card.card_images[index].image_url) {
+                            AsyncImage(url: imageUrl) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .onTapGesture {
+                                        shouldPresentImageSheet = true
+                                    }
+                                    .tag(index)
+                            } placeholder: {
+                                ProgressView()
                             }
-                    } placeholder: {
-                        ProgressView()
+                        }
                     }
                 }
-                Text("Tap image to see original card")
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+                .frame(height: 300)
+
+                Text("Swipe to see alternate arts. Tap to view full size.")
                     .font(.footnote)
+                
                 CardTextView(text: card.desc)
                 
-                HStack() {
+                HStack {
                     if let atk = card.atk {
                         Text("ATK: \(atk)")
                             .bold()
@@ -47,16 +57,21 @@ struct CardDetailView: View {
             }
         }
         .sheet(isPresented: $shouldPresentImageSheet) {
-            if let fullImageUrl = URL(string: card.card_images.first?.image_url ?? "") {
-                AsyncImage(url: fullImageUrl) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .edgesIgnoringSafeArea(.all)
-                } placeholder: {
-                    ProgressView()
-                }
+            if let fullImageUrl = URL(string: card.card_images[selectedImageIndex].image_url) {
+                FullImageSheet(imageUrl: fullImageUrl)
             }
+        }
+    }
+
+    @ViewBuilder
+    func FullImageSheet(imageUrl: URL) -> some View {
+        AsyncImage(url: imageUrl) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .edgesIgnoringSafeArea(.all)
+        } placeholder: {
+            ProgressView()
         }
     }
 }

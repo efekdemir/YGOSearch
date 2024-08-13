@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardSearchView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel = CardsViewModel()
+    @ObservedObject var viewModel = CardViewModel()
     
     @State private var searchText = ""
     
