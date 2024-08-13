@@ -73,7 +73,6 @@
 		B447E62E2C2B7C34003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				CardsViewModel.swift,
 				CardViewModel.swift,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
