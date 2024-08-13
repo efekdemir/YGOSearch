@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CardSearchView.swift
 //  YGOSearch
 //
 //  Created by Efe Demir on 8/28/23.
@@ -9,32 +9,31 @@ import SwiftUI
 
 struct CardSearchView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel = CardViewModel()
+    @ObservedObject var viewModel = CardsViewModel()
     
     @State private var searchText = ""
     
     var body: some View {
         NavigationView {
             VStack {
-                TextField("🔍 Search card", text: $searchText, onCommit: {
-                    viewModel.loadCardData(searchText)
-                })
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                TextField("🔍 Search card", text: $searchText) {
+                    viewModel.loadCardsData(searchText)
+                }
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
                 
-                Spacer()
+                List(viewModel.cards, id: \.id) { card in
+                    NavigationLink(destination: CardDetailView(card: card)) {
+                        Text(card.name)
+                    }
+                    .padding(.vertical, 4)
+                }
+                .listStyle(PlainListStyle())
                 
-                
-                if let card = viewModel.card {
-                    CardView(card: card)
-                } else if let errorMessage = viewModel.errorMessage {
+                if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
                         .foregroundColor(.red)
-                } else {
-                    Text("Name must be correctly written (i.e. Blue-Eyes White Dragon)")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        .padding(.bottom)
                 }
             }
             .navigationBarTitle("Search Menu", displayMode: .inline)
@@ -49,8 +48,4 @@ struct CardSearchView: View {
             })
         }
     }
-}
-
-#Preview {
-    CardSearchView()
 }
