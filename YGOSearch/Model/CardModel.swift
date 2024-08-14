@@ -17,6 +17,7 @@ struct CardModel: Codable, Identifiable {
     var atk: Int?
     var def: Int?
     var level: Int?
+    var linkval: Int?
     var race: String
     var attribute: String?
     var archetype: String?

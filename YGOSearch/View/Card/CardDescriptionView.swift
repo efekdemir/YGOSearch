@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardTextView: View {
+struct CardDescriptionView: View {
     var text: String
 
     var body: some View {
@@ -23,5 +23,5 @@ struct CardTextView: View {
 
 
 #Preview {
-    CardTextView(text: "Blue-Eyes White Dragon")
+    CardDescriptionView(text: "Blue-Eyes White Dragon")
 }

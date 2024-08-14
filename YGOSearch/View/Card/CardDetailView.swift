@@ -13,19 +13,67 @@ struct CardDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                Text(card.name)
-                    .font(.title)
-                Text(card.type)
-                    .font(.subheadline)
+                let length = card.name.count
+                if length > 35 {
+                    Text(card.name)
+                        .font(.title)
+                        .bold()
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.3)
+                        .padding(.horizontal)
+                } else {
+                    Text(card.name)
+                        .font(.title)
+                        .bold()
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.3)
+                        .padding(.horizontal)
+                }
+                
+//                ZStack(alignment: .topTrailing) {
+//                    TabView(selection: $selectedImageIndex) {
+//                        ForEach(card.card_images.indices, id: \.self) { index in
+//                            if let imageUrl = URL(string: card.card_images[index].image_url_cropped) {
+//                                AsyncImage(url: imageUrl) { image in
+//                                    image
+//                                        .resizable()
+//                                        .scaledToFill()
+//                                        .clipped()
+//                                        .onTapGesture {
+//                                            shouldPresentImageSheet = true
+//                                        }
+//                                        .tag(index)
+//                                } placeholder: {
+//                                    ProgressView()
+//                                }
+//                            }
+//                        }
+//                    }
+//                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+//
+//                    if let level = card.level {
+//                        ZStack {
+//                            Image(card.type.contains("XYZ") ? "rank" : "level")
+//                                .resizable()
+//                                .frame(width: 40, height: 40)
+//                                .padding([.top, .trailing], 10)
+//
+//                            Text("\(level)")
+//                                .foregroundColor(.black)
+//                                .padding([.top, .trailing], 10)
+//                                .bold()
+//                        }
+//                    }
+//                }
+//                .frame(height: card.type.contains("Pendulum Effect Monster") ? 500 : 400)
 
-                // Image gallery
                 TabView(selection: $selectedImageIndex) {
                     ForEach(card.card_images.indices, id: \.self) { index in
-                        if let imageUrl = URL(string: card.card_images[index].image_url) {
+                        if let imageUrl = URL(string: card.card_images[index].image_url_cropped) {
                             AsyncImage(url: imageUrl) { image in
                                 image
                                     .resizable()
-                                    .aspectRatio(contentMode: .fit)
+                                    .scaledToFill()
                                     .onTapGesture {
                                         shouldPresentImageSheet = true
                                     }
@@ -37,23 +85,16 @@ struct CardDetailView: View {
                     }
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                .frame(height: 300)
+                .frame(height: card.type.contains("Pendulum Effect Monster") ? 500 : 400)
 
                 Text("Swipe to see alternate arts. Tap to view full size.")
                     .font(.footnote)
                 
-                CardTextView(text: card.desc)
+                CardSummaryView(type: card.type, race: card.race, atk: card.atk, def: card.def, level: card.level,
+                                linkval: card.linkval, archetype: card.archetype, attribute: card.attribute)
                 
-                HStack {
-                    if let atk = card.atk {
-                        Text("ATK: \(atk)")
-                            .bold()
-                    }
-                    if let def = card.def {
-                        Text("DEF: \(def)")
-                            .bold()
-                    }
-                }
+                CardDescriptionView(text: card.desc)
+                
             }
         }
         .sheet(isPresented: $shouldPresentImageSheet) {
