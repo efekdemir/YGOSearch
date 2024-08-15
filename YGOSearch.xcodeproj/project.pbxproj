@@ -57,8 +57,11 @@
 			membershipExceptions = (
 				Card/CardDescriptionView.swift,
 				Card/CardDetailView.swift,
+				Card/CardImagesTabView.swift,
 				Card/CardSearchView.swift,
 				Card/CardSummaryView.swift,
+				Card/CardTitleView.swift,
+				Colors.swift,
 				MainMenuView.swift,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;

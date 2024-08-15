@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardSummaryView: View {
     var type: String
+    var frameType: String
     var race: String
     var atk: Int?
     var def: Int?
@@ -16,6 +17,13 @@ struct CardSummaryView: View {
     var linkval: Int?
     var archetype: String?
     var attribute: String?
+    
+    private var backgroundColor: Color {
+        guard let frameType = FrameType(rawValue: frameType) else {
+            return Color.gray
+        }
+        return frameSummaryColors[frameType] ?? Color.gray
+    }
     
     var body: some View {
         
@@ -58,7 +66,7 @@ struct CardSummaryView: View {
             .bold()
             .padding()
             .frame(maxWidth: .infinity)
-            .background(Color.red)
+            .background(backgroundColor)
             .foregroundColor(.white)
             .cornerRadius(10)
             .padding()

@@ -13,6 +13,7 @@ struct CardModel: Codable, Identifiable {
     var id: Int
     var name: String
     var type: String
+    var frameType: String
     var desc: String
     var atk: Int?
     var def: Int?
@@ -55,7 +56,8 @@ func createMockCardModel() -> CardModel {
     return CardModel(
         id: 123,
         name: "Blue-Eyes White Dragon",
-        type: "Dragon/Effect",
+        type: "Dragon/Effect", 
+        frameType: "normal",
         desc: "This legendary dragon is a powerful engine of destruction.",
         atk: 3000,
         def: 2500,

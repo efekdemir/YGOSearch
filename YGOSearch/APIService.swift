@@ -71,7 +71,7 @@ class APIService {
             })
             .map(\.data)
             .handleEvents(receiveOutput: { data in
-                let rawString = String(data: data, encoding: .utf8) ?? "Failed to decode data"
+                _ = String(data: data, encoding: .utf8) ?? "Failed to decode data"
 //                print("Received data: \(rawString)")
             })
             .decode(type: ApiResponse.self, decoder: JSONDecoder())
