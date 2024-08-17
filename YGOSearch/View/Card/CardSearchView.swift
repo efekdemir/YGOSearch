@@ -10,19 +10,18 @@ import SwiftUI
 struct CardSearchView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel = CardViewModel()
-    
+
     @State private var searchText = ""
-    
+
     var body: some View {
         NavigationView {
             VStack {
                 TextField("🔍 Search card", text: $searchText) {
                     viewModel.loadCardsData(searchText)
                 }
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
 
-                
                 List(viewModel.cards, id: \.id) { card in
                     NavigationLink(destination: CardDetailView(card: card)) {
                         Text(card.name)
@@ -30,10 +29,10 @@ struct CardSearchView: View {
                     .padding(.vertical, 4)
                 }
                 .listStyle(PlainListStyle())
-                
-                if let errorMessage = viewModel.errorMessage {
-                    Text(errorMessage)
-                        .foregroundColor(.red)
+
+                if viewModel.showError {
+                    ErrorBanner(errorMessage: $viewModel.errorMessage, showError: $viewModel.showError)
+                        .padding(.bottom)
                 }
             }
             .navigationBarTitle("Search Menu", displayMode: .inline)

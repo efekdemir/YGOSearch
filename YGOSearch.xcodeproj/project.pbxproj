@@ -55,9 +55,15 @@
 		B447E6292C2B7BBB003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Card/CardDescriptionView.swift,
 				Card/CardDetailView.swift,
+				Card/CardImageSheet.swift,
+				Card/CardImagesTabView.swift,
 				Card/CardSearchView.swift,
-				Card/CardTextView.swift,
+				Card/CardSummaryView.swift,
+				Card/CardTitleView.swift,
+				Colors.swift,
+				ErrorBanner.swift,
 				MainMenuView.swift,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
