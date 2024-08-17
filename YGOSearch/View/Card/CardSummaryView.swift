@@ -27,49 +27,38 @@ struct CardSummaryView: View {
     
     var body: some View {
         
-            VStack {
-                HStack {
-                    Text(type)
-                    Text("|")
-                    Text(race)
+        VStack {
+            HStack {
+                Text(type)
+                Text("|")
+                Text(race)
+            }
+            .lineLimit(1)
+            .minimumScaleFactor(0.3)
+            .scaledToFit()
+            
+            HStack {
+                if let attribute {
+                    Text(attribute)
                 }
-                .lineLimit(1)
-                .minimumScaleFactor(0.3)
-                .scaledToFit()
-                
-                HStack {
-                    if let attribute {
-                        Text(attribute)
-                    }
-                    if let atk {
-                        Text("|  ATK: \(atk)")
-                    }
-                    if let def {
-                        Text("|  DEF: \(def)")
-                    }
-                    if let linkval {
-                        Text("|  LINK - \(linkval)")
-                    }
+                if let atk {
+                    Text("|  ATK: \(atk)")
                 }
-                
-                if let level {
-                    ZStack {
-                        Image(type.contains("XYZ") ? "rank" : "level")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                        Text("\(level)")
-                            .foregroundColor(.black)
-                        
-                    }
+                if let def {
+                    Text("|  DEF: \(def)")
+                }
+                if let linkval {
+                    Text("|  LINK - \(linkval)")
                 }
             }
-            .bold()
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(backgroundColor)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .padding()
-            
         }
+        .bold()
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(backgroundColor)
+        .foregroundColor(frameType == "synchro" || frameType == "normal" ? .black : .white)
+        .cornerRadius(10)
+        .padding()
+        
+    }
 }

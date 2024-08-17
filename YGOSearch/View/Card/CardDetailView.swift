@@ -10,14 +10,14 @@ struct CardDetailView: View {
     var card: CardModel
     @State private var selectedImageIndex = 0
     @State private var shouldPresentImageSheet = false
-
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
                 CardTitleView(card: card)
                 
                 CardImagesTabView(card: card, selectedImageIndex: $selectedImageIndex, shouldPresentImageSheet: $shouldPresentImageSheet)
-
+                
                 Text("Swipe to see alternate arts. Tap to view full size.")
                     .font(.footnote)
                 
@@ -30,20 +30,8 @@ struct CardDetailView: View {
         }
         .sheet(isPresented: $shouldPresentImageSheet) {
             if let fullImageUrl = URL(string: card.card_images[selectedImageIndex].image_url) {
-                FullImageSheet(imageUrl: fullImageUrl)
+                CardImageSheet(imageUrl: fullImageUrl, isPresented: $shouldPresentImageSheet)
             }
-        }
-    }
-
-    @ViewBuilder
-    func FullImageSheet(imageUrl: URL) -> some View {
-        AsyncImage(url: imageUrl) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .edgesIgnoringSafeArea(.all)
-        } placeholder: {
-            ProgressView()
         }
     }
 }

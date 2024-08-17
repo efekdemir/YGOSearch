@@ -9,51 +9,6 @@ import Foundation
 import Combine
 
 class APIService {
-//    func fetchCardDetails(for name: String) -> AnyPublisher<CardModel, Error> {
-//            var urlComponents = URLComponents(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php")
-//            urlComponents?.queryItems = [URLQueryItem(name: "name", value: name)]
-//            
-//            guard let url = urlComponents?.url else {
-//                fatalError("Invalid URL")
-//            }
-//        
-//            print("url string: " + url.absoluteString)
-//            
-//            return URLSession.shared.dataTaskPublisher(for: url)
-//                .map(\.data)
-//                .decode(type: ApiResponse.self, decoder: JSONDecoder())
-//                .tryMap { response in
-//                    guard let card = response.data.first else {
-//                        throw URLError(.cannotParseResponse, userInfo: [NSLocalizedDescriptionKey: "No cards found for the given name"])
-//                    }
-//                    return card
-//                }
-//                .receive(on: DispatchQueue.main)
-//                .eraseToAnyPublisher()
-//        }
-    
-//    func fetchCardDetails(for name: String) -> AnyPublisher<CardModel, Error> {
-//        var urlComponents = URLComponents(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php")
-//        urlComponents?.queryItems = [URLQueryItem(name: "fname", value: name)]
-//        
-//        guard let url = urlComponents?.url else {
-//            fatalError("Invalid URL")
-//        }
-//        
-//        print("url string: " + url.absoluteString)
-//        
-//        return URLSession.shared.dataTaskPublisher(for: url)
-//            .map(\.data)
-//            .decode(type: ApiResponse.self, decoder: JSONDecoder())
-//            .tryMap { response in
-//                guard let card = response.data.first else {
-//                    throw URLError(.cannotParseResponse, userInfo: [NSLocalizedDescriptionKey: "No cards found for the given name"])
-//                }
-//                return card
-//            }
-//            .receive(on: DispatchQueue.main)
-//            .eraseToAnyPublisher()
-//    }
     
     func fetchCardsDetails(for name: String) -> AnyPublisher<[CardModel], Error> {
         var urlComponents = URLComponents(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php")
