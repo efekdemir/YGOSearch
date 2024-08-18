@@ -4,7 +4,6 @@
 //
 //  Created by Efe Demir on 8/28/23.
 //
-
 import SwiftUI
 
 struct CardSearchView: View {
@@ -16,11 +15,9 @@ struct CardSearchView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("🔍 Search card", text: $searchText) {
+                SearchTextField(text: $searchText) {
                     viewModel.loadCardsData(searchText)
                 }
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
 
                 List(viewModel.cards, id: \.id) { card in
                     NavigationLink(destination: CardDetailView(card: card)) {
@@ -36,15 +33,6 @@ struct CardSearchView: View {
                 }
             }
             .navigationBarTitle("Search Menu", displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                HStack(spacing: 2) {
-                    Image(systemName: "chevron.left.circle")
-                    Text("Main Menu")
-                }
-                .foregroundColor(.blue)
-            })
         }
     }
 }

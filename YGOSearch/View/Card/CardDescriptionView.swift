@@ -12,6 +12,7 @@ struct CardDescriptionView: View {
 
     var body: some View {
         Text(text)
+            .adjustableFontSize()
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.blue)

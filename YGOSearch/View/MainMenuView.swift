@@ -8,45 +8,44 @@
 import SwiftUI
 
 struct MainMenuView: View {
-    @State private var showingCardSearch = false
-    
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                VStack {
-                    Image("ygo")
-                        .resizable()
-                        .scaledToFit()
-                        .padding()
-                    
-                    Button("Card Search") {
-                        showingCardSearch = true
+        TabView {
+            NavigationView {
+                GeometryReader { geometry in
+                    VStack {
+                        Image("ygo")
+                            .resizable()
+                            .scaledToFit()
+                            .padding()
+                        
+                        Spacer()
+                        
+                        Text("Created by Efe Demir")
+                            .frame(width: geometry.size.width, alignment: .center)
+                            .font(.footnote)
+                            .padding(.bottom, geometry.safeAreaInsets.bottom)
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(8)
-                    .padding()
-                    .padding()
-                    
-                    Spacer()
-                    
-                    Text("Created by Efe Demir")
-                        .frame(width: geometry.size.width, alignment: .center)
-                        .font(.footnote)
-                        .padding(.bottom, geometry.safeAreaInsets.bottom)
-                }
-                .navigationBarTitle("Main Menu", displayMode: .inline)
-                .fullScreenCover(isPresented: $showingCardSearch) {
-                    CardSearchView()
+                    .navigationBarTitle("Main Menu", displayMode: .inline)
                 }
             }
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+
+            CardSearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+            
+            FavoritesView()
+                .tabItem {
+                    Label("Favorites", systemImage: "heart")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
-        
     }
-}
-
-
-#Preview {
-    MainMenuView()
 }

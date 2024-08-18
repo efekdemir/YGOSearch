@@ -60,11 +60,16 @@
 				Card/CardImageSheet.swift,
 				Card/CardImagesTabView.swift,
 				Card/CardSearchView.swift,
+				Card/CardShopView.swift,
 				Card/CardSummaryView.swift,
 				Card/CardTitleView.swift,
+				Card/SearchTextField.swift,
 				Colors.swift,
 				ErrorBanner.swift,
+				FavoritesView.swift,
+				ImageLoader.swift,
 				MainMenuView.swift,
+				SettingsView.swift,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
 		};

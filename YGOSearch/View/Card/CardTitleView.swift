@@ -15,6 +15,7 @@ struct CardTitleView: View {
             let length = card.name.count
             if length > 35 {
                 Text(card.name)
+                    .adjustableFontSize()
                     .font(.title)
                     .bold()
                     .lineLimit(2)
@@ -22,6 +23,7 @@ struct CardTitleView: View {
                     .padding(.horizontal)
             } else {
                 Text(card.name)
+                    .adjustableFontSize()
                     .font(.title)
                     .bold()
                     .lineLimit(1)
