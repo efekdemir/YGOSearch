@@ -63,6 +63,7 @@
 				Card/CardShopView.swift,
 				Card/CardSummaryView.swift,
 				Card/CardTitleView.swift,
+				Card/FilterView.swift,
 				Card/SearchTextField.swift,
 				Colors.swift,
 				ErrorBanner.swift,
