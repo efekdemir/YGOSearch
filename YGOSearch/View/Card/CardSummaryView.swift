@@ -51,7 +51,10 @@ struct CardSummaryView: View {
                     Text("|  LINK - \(linkval)")
                 }
             }
+            .lineLimit(1)
+            .minimumScaleFactor(0.3)
         }
+        .adjustableFontSize()
         .bold()
         .padding()
         .frame(maxWidth: .infinity)

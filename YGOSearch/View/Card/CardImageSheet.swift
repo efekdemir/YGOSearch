@@ -51,6 +51,7 @@ struct CardImageSheet: View {
                 }) {
                     Image(systemName: "xmark.circle.fill")
                         .imageScale(.large)
+                        .foregroundColor(Color(UIColor.opaqueSeparator))
                         .padding(20)
                 }
             }
