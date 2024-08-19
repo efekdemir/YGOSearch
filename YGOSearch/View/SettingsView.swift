@@ -9,6 +9,12 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
     @AppStorage("fontSize") private var fontSize = 14.0
+    @AppStorage("selectedLanguage") private var selectedLanguage = "en"
+
+    private let languages = ["English": "en", "French": "fr", "German": "de", "Italian": "it", "Portuguese": "pt"]
+    private var languageNames: [String] {
+        Array(languages.keys).sorted()
+    }
 
     var body: some View {
         NavigationView {
@@ -24,6 +30,14 @@ struct SettingsView: View {
                     HStack {
                         Text("Font Size").adjustableFontSize()
                         Slider(value: $fontSize, in: 10...22, step: 1)
+                    }
+                }
+                
+                Section(header: Text("Language").adjustableFontSize()) {
+                    Picker("Language", selection: $selectedLanguage) {
+                        ForEach(languageNames, id: \.self) { name in
+                            Text(name).tag(languages[name]!)
+                        }
                     }
                 }
                 

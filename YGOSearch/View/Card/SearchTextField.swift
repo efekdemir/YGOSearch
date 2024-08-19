@@ -9,8 +9,11 @@ import SwiftUI
 
 struct SearchTextField: View {
     @Binding var text: String
+    @ObservedObject var viewModel = CardViewModel()
+    
     var onCommit: () -> Void
     var onFilter: () -> Void
+    var onReset: () -> Void
 
     var body: some View {
         HStack {
@@ -20,6 +23,7 @@ struct SearchTextField: View {
             if !text.isEmpty {
                 Button(action: {
                     self.text = ""
+                    onReset()
                 }) {
                     Image(systemName: "multiply.circle.fill")
                         .foregroundColor(Color(UIColor.opaqueSeparator))
