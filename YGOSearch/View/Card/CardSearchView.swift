@@ -19,6 +19,8 @@ struct CardSearchView: View {
                     viewModel.loadCardsData(searchText)
                 }, onFilter: {
                     showingFilter = true
+                }, onReset: {
+                    viewModel.loadAllCards()
                 })
 
                 List(viewModel.cards, id: \.id) { card in
