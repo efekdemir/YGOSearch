@@ -8,29 +8,51 @@
 import Foundation
 import Combine
 
-import Combine
-
 class CardViewModel: ObservableObject {
     @Published var cards: [CardModel] = []
     @Published var errorMessage: String?
     @Published var showError: Bool = false
+    @Published var selectedTypes: Set<String> = []
 
     private var cancellables = Set<AnyCancellable>()
     private var apiService: APIService
 
     init(apiService: APIService = APIService()) {
         self.apiService = apiService
+        self.loadAllCards()
+    }
+    
+    func loadAllCards() {
+        apiService.fetchAllCards()
+            .sink(receiveCompletion: { [weak self] completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self?.errorMessage = "Failed to load cards: \(error.localizedDescription)"
+                    self?.showError = true
+                }
+            }, receiveValue: { [weak self] cards in
+                self?.cards = cards
+                self?.showError = false
+            })
+            .store(in: &cancellables)
     }
 
     func loadCardsData(_ searchTerm: String) {
-        guard searchTerm.count >= 2 else {
-            errorMessage = "Search term must be at least 2 characters long."
+        guard searchTerm.count >= 2 || !selectedTypes.isEmpty else {
+            errorMessage = "Search term must be at least 2 characters long or a filter must be active"
             showError = true
             cards = []
             return
         }
 
-        apiService.fetchCardsDetails(for: searchTerm)
+        var typeFilter: String? = nil
+        if !selectedTypes.isEmpty {
+            typeFilter = selectedTypes.joined(separator: ",")
+        }
+
+        apiService.fetchCardsDetails(for: searchTerm, typeFilter: typeFilter)
             .map { cards in
                 cards.filter { card in
                     let searchTerms = searchTerm.lowercased().split(separator: " ")

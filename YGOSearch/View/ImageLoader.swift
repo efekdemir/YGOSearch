@@ -20,7 +20,7 @@ class ImageLoader: ObservableObject {
         }
 
         cancellable = URLSession.shared.dataTaskPublisher(for: url)
-            .map { data, _ in Image(uiImage: UIImage(data: data)!) }
+            .map { data, _ in Image(uiImage: UIImage(data: data) ?? UIImage(resource: .ygoSearch) ) }
             .catch { _ in Just(Image(systemName: "photo")) }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
