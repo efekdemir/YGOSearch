@@ -50,36 +50,3 @@ struct CardSearchView: View {
         }
     }
 }
-
-
-
-//struct CardSearchView: View {
-//    @Environment(\.presentationMode) var presentationMode
-//    @ObservedObject var viewModel = CardViewModel()
-//
-//    @State private var searchText = ""
-//
-//    var body: some View {
-//        NavigationView {
-//            VStack {
-//                SearchTextField(text: $searchText) {
-//                    viewModel.loadCardsData(searchText)
-//                }
-//
-//                List(viewModel.cards, id: \.id) { card in
-//                    NavigationLink(destination: CardDetailView(card: card)) {
-//                        Text(card.name)
-//                    }
-//                    .padding(.vertical, 4)
-//                }
-//                .listStyle(PlainListStyle())
-//
-//                if viewModel.showError {
-//                    ErrorBanner(errorMessage: $viewModel.errorMessage, showError: $viewModel.showError)
-//                        .padding(.bottom)
-//                }
-//            }
-//            .navigationBarTitle("Search Menu", displayMode: .inline)
-//        }
-//    }
-//}

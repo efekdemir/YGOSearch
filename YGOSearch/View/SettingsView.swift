@@ -33,7 +33,7 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section(header: Text("Language").adjustableFontSize()) {
+                Section(header: Text("Card Language").adjustableFontSize()) {
                     Picker("Language", selection: $selectedLanguage) {
                         ForEach(languageNames, id: \.self) { name in
                             Text(name).tag(languages[name]!)

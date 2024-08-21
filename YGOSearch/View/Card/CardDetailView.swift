@@ -88,7 +88,7 @@ struct CardDetailView: View {
     
     func saveFavorites(_ cards: [CardModel]) {
         guard let data = try? JSONEncoder().encode(cards) else {
-            print("Failed to encode card models")
+//            print("Failed to encode card models")
             return
         }
         favoriteCardsData = data
