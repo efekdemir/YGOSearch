@@ -15,9 +15,9 @@ class CardViewModel: ObservableObject {
     @Published var selectedTypes: Set<String> = []
 
     private var cancellables = Set<AnyCancellable>()
-    private var apiService: APIService
+    private var apiService: APIServiceProtocol
 
-    init(apiService: APIService = APIService()) {
+    init(apiService: APIServiceProtocol = APIService()) {
         self.apiService = apiService
         self.loadAllCards()
     }

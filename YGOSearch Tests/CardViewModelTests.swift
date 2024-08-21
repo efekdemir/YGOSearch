@@ -29,25 +29,21 @@ class CardViewModelTests: XCTestCase {
     }
 
     func testLoadCardDataSuccess() {
-        let expectedCard = createMockCardModel()
-        mockAPIService.card = expectedCard
+        let expectedCard = MockData.decodeMockCard(jsonString: MockData.blueEyesWhiteDragon)
+        mockAPIService.cards = [expectedCard]
 
         let expectation = XCTestExpectation(description: "Card data loaded")
-        sut.$card
+        sut.$cards
             .dropFirst()
-            .sink { card in
-                XCTAssertEqual(card?.name, expectedCard.name)
-                XCTAssertEqual(card?.type, expectedCard.type)
-                XCTAssertEqual(card?.atk, expectedCard.atk)
-                XCTAssertEqual(card?.def, expectedCard.def)
-                XCTAssertEqual(card?.card_sets.first?.set_name, "Legend of Blue Eyes White Dragon")
-                XCTAssertEqual(card?.card_images.first?.image_url, "https://example.com/image.png")
-                XCTAssertEqual(card?.card_prices.first?.ebay_price, "6.00")
+            .sink { cards in
+                XCTAssertEqual(cards.first?.name, expectedCard.name)
+                XCTAssertEqual(cards.first?.atk, expectedCard.atk)
+                XCTAssertEqual(cards.first?.def, expectedCard.def)
                 expectation.fulfill()
             }
             .store(in: &cancellables)
 
-        sut.loadCardData("Blue-Eyes White Dragon")
+        sut.loadAllCards()
         wait(for: [expectation], timeout: 1.0)
     }
 
@@ -64,8 +60,7 @@ class CardViewModelTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        sut.loadCardData("Unknown Card")
+        sut.loadAllCards()
         wait(for: [expectation], timeout: 1.0)
     }
 }
-

@@ -5,7 +5,20 @@
 //  Created by Efe Demir on 6/14/24.
 //
 
-struct MockCardData {
+import Foundation
+
+struct MockData {
+    static func decodeMockCard(jsonString: String) -> CardModel {
+        let jsonData = jsonString.data(using: .utf8)!
+        do {
+            let decoder = JSONDecoder()
+            let cardModel = try decoder.decode(CardModel.self, from: jsonData)
+            return cardModel
+        } catch {
+            fatalError("Failed to decode CardModel: \(error)")
+        }
+    }
+    
     static let jarOfGreed = """
         {
           "id": 83968380,

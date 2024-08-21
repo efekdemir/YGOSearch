@@ -13,6 +13,7 @@
 		B453291C2A9CBA5B006584AA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291B2A9CBA5B006584AA /* APIService.swift */; };
 		B457D3A62C2A5F65002C004D /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A52C2A5F65002C004D /* APIServiceTests.swift */; };
 		B457D3A82C2A654D002C004D /* CardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A72C2A654D002C004D /* CardViewModelTests.swift */; };
+		B4E264232C757E580012B896 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B4E264222C757E580012B896 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		B453291B2A9CBA5B006584AA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B457D3A52C2A5F65002C004D /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		B457D3A72C2A654D002C004D /* CardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelTests.swift; sourceTree = "<group>"; };
+		B4E264222C757E580012B896 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -78,7 +80,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				MockData.swift,
-				SampleCard.swift,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
 		};
@@ -89,12 +90,19 @@
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
 		};
+		B4E2642A2C7587000012B896 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MockAPIService.swift,
+			);
+			target = B45328FB2A9CB911006584AA /* YGOSearchTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B447E6262C2B7BA1003998B3 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E6272C2B7BA6003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
 		B447E6282C2B7BB8003998B3 /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E6292C2B7BBB003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
-		B447E62B2C2B7BDD003998B3 /* Mocks */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E62C2C2B7BE3003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Mocks; sourceTree = "<group>"; };
+		B447E62B2C2B7BDD003998B3 /* Mocks */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E62C2C2B7BE3003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, B4E2642A2C7587000012B896 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Mocks; sourceTree = "<group>"; };
 		B447E62D2C2B7C2D003998B3 /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B447E62E2C2B7C34003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -148,11 +156,11 @@
 				B45328EF2A9CB90F006584AA /* YGOSearch.swift */,
 				B453291B2A9CBA5B006584AA /* APIService.swift */,
 				B447E62D2C2B7C2D003998B3 /* ViewModel */,
-				B447E62B2C2B7BDD003998B3 /* Mocks */,
 				B447E6282C2B7BB8003998B3 /* View */,
 				B447E6262C2B7BA1003998B3 /* Model */,
 				B45328F32A9CB911006584AA /* Assets.xcassets */,
 				B45328F52A9CB911006584AA /* Preview Content */,
+				B4E264222C757E580012B896 /* Localizable.xcstrings */,
 			);
 			path = YGOSearch;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 		B45328FF2A9CB911006584AA /* YGOSearch Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B447E62B2C2B7BDD003998B3 /* Mocks */,
 				B457D3A52C2A5F65002C004D /* APIServiceTests.swift */,
 				B457D3A72C2A654D002C004D /* CardViewModelTests.swift */,
 			);
@@ -260,6 +269,10 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				"pt-BR",
+				de,
+				it,
 			);
 			mainGroup = B45328E32A9CB90F006584AA;
 			productRefGroup = B45328ED2A9CB90F006584AA /* Products */;
@@ -280,6 +293,7 @@
 			files = (
 				B45328F72A9CB911006584AA /* Preview Assets.xcassets in Resources */,
 				B45328F42A9CB911006584AA /* Assets.xcassets in Resources */,
+				B4E264232C757E580012B896 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +412,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -452,6 +467,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

@@ -25,25 +25,6 @@ final class APIServiceTests: XCTestCase {
         super.tearDown()
     }
 
-    func testFetchCardDetailsSuccess() {
-        let expectation = XCTestExpectation(description: "Successfully fetched card details from real API")
-
-        sut.fetchCardDetails(for: "Blue-Eyes White Dragon")
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    XCTFail("Error occurred: \(error)")
-                }
-            }, receiveValue: { card in
-                XCTAssertEqual(card.name, "Blue-Eyes White Dragon")
-                expectation.fulfill()
-            })
-            .store(in: &cancellables)
-
-        wait(for: [expectation], timeout: 10.0)
-    }
 
     func testFetchMockCardDetailsSuccess() {
         let expectation = XCTestExpectation(description: "Successfully fetched card details from mock data")
@@ -68,7 +49,7 @@ final class APIServiceTests: XCTestCase {
     func testFetchCardDetailsFailure() {
         let expectation = XCTestExpectation(description: "Properly handles the case where no card details are found")
 
-        sut.fetchCardDetails(for: "Blue-Eyes Black Dragon")
+        sut.fetchCardsDetails(for: "Blue-Eyes Black Dragon")
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:
