@@ -7,10 +7,25 @@
     "%lld" : {
 
     },
+    "<" : {
+
+    },
+    "=" : {
+
+    },
+    ">" : {
+
+    },
     "|" : {
 
     },
+    "|  ATK: ?" : {
+
+    },
     "|  ATK: %lld" : {
+
+    },
+    "|  DEF: ?" : {
 
     },
     "|  DEF: %lld" : {
@@ -155,6 +170,9 @@
         }
       }
     },
+    "ATK" : {
+
+    },
     "Card" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -190,6 +208,9 @@
         }
       }
     },
+    "Card Filters" : {
+
+    },
     "Card Language" : {
       "localizations" : {
         "de" : {
@@ -217,6 +238,9 @@
           }
         }
       }
+    },
+    "Condition" : {
+
     },
     "Created by Efe Demir" : {
       "extractionState" : "manual",
@@ -287,6 +311,12 @@
           }
         }
       }
+    },
+    "DEF" : {
+
+    },
+    "Done" : {
+
     },
     "Favorites" : {
       "extractionState" : "manual",
@@ -498,6 +528,15 @@
         }
       }
     },
+    "Monster Attack & Defense" : {
+
+    },
+    "Monster Level & Link Rating" : {
+
+    },
+    "Monster Race & Card Type" : {
+
+    },
     "Other Settings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -637,6 +676,18 @@
           }
         }
       }
+    },
+    "Select Levels" : {
+
+    },
+    "Select Link Ratings" : {
+
+    },
+    "Select Races" : {
+
+    },
+    "Select Types" : {
+
     },
     "Settings" : {
       "extractionState" : "manual",
