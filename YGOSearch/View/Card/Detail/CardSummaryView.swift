@@ -42,10 +42,20 @@ struct CardSummaryView: View {
                     Text(attribute)
                 }
                 if let atk {
-                    Text("|  ATK: \(atk)")
+                    if atk == -1 {
+                        Text("|  ATK: ?")
+                    } else {
+                        Text("|  ATK: \(atk)")
+                    }
+                
                 }
                 if let def {
-                    Text("|  DEF: \(def)")
+                    if def == -1 {
+                        Text("|  DEF: ?")
+                    } else {
+                        Text("|  DEF: \(def)")
+                    }
+                
                 }
                 if let linkval {
                     Text("|  LINK - \(linkval)")
