@@ -27,7 +27,6 @@ struct CardSummaryView: View {
     }
     
     var body: some View {
-        
         VStack {
             if let banlistInfo {
                 if let tcg = banlistInfo.ban_tcg {
@@ -54,7 +53,7 @@ struct CardSummaryView: View {
                     } else {
                         Text("|  ATK: \(atk)")
                     }
-                
+                    
                 }
                 if let def {
                     if def == -1 {
@@ -62,7 +61,7 @@ struct CardSummaryView: View {
                     } else {
                         Text("|  DEF: \(def)")
                     }
-                
+                    
                 }
                 if let linkval {
                     Text("|  LINK - \(linkval)")
@@ -79,6 +78,5 @@ struct CardSummaryView: View {
         .foregroundColor(frameType == "synchro" || frameType == "normal" ? .black : .white)
         .cornerRadius(10)
         .padding()
-        
     }
 }

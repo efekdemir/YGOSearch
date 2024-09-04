@@ -242,6 +242,9 @@
     "Condition" : {
 
     },
+    "Connect on LinkedIn" : {
+
+    },
     "Created by Efe Demir" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -276,6 +279,9 @@
           }
         }
       }
+    },
+    "Created by Efe Demir using YGOPRODeck API" : {
+
     },
     "Dark Mode" : {
       "extractionState" : "manual",
@@ -423,6 +429,9 @@
         }
       }
     },
+    "Hello, World!" : {
+
+    },
     "Home" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -457,6 +466,9 @@
           }
         }
       }
+    },
+    "If you have any recommendations for improving the app, feel free to contact me :)" : {
+
     },
     "Language" : {
       "extractionState" : "manual",
@@ -529,9 +541,6 @@
       }
     },
     "Monster Attack & Defense" : {
-
-    },
-    "Monster Level & Link Rating" : {
 
     },
     "Monster Race & Card Type" : {
@@ -759,6 +768,9 @@
         }
       }
     },
+    "Thank you for downloading YGO Search!" : {
+
+    },
     "Version:" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -795,6 +807,9 @@
       }
     },
     "Version: 1.0.0" : {
+
+    },
+    "Visit my GitHub" : {
 
     }
   },
