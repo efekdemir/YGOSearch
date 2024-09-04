@@ -138,9 +138,9 @@ class CardViewModel: ObservableObject {
             return false
         }
 
-        var levelMatches = selectedLevels.isEmpty || (card.type.contains("Monster") && card.level.map(selectedLevels.contains) == true)
+        let levelMatches = selectedLevels.isEmpty || (card.type.contains("Monster") && card.level.map(selectedLevels.contains) == true)
         
-        var linkRatingMatches = selectedLinkRatings.isEmpty || (card.type == "Link Monster" && card.linkval.map(selectedLinkRatings.contains) == true)
+        let linkRatingMatches = selectedLinkRatings.isEmpty || (card.type == "Link Monster" && card.linkval.map(selectedLinkRatings.contains) == true)
 
         return (selectedLevels.isEmpty || levelMatches) && (selectedLinkRatings.isEmpty || linkRatingMatches)
     }

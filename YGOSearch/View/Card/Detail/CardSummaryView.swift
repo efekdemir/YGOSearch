@@ -17,6 +17,7 @@ struct CardSummaryView: View {
     var linkval: Int?
     var archetype: String?
     var attribute: String?
+    var banlistInfo: CardModel.BanlistInfo?
     
     private var backgroundColor: Color {
         guard let frameType = FrameType(rawValue: frameType) else {
@@ -28,6 +29,12 @@ struct CardSummaryView: View {
     var body: some View {
         
         VStack {
+            if let banlistInfo {
+                if let tcg = banlistInfo.ban_tcg {
+                    Text(tcg)
+                }
+            }
+            
             HStack {
                 Text(type)
                 Text("|")

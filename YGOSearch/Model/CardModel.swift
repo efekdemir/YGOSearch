@@ -24,6 +24,7 @@ struct CardModel: Codable, Identifiable {
     var archetype: String?
     var ygoprodeck_url: String?
     var card_sets: [CardSet]?
+    var banlist_info: BanlistInfo?
     var card_images: [CardImage]
     var card_prices: [CardPrice]
 
@@ -33,6 +34,12 @@ struct CardModel: Codable, Identifiable {
         var set_rarity: String
         var set_rarity_code: String
         var set_price: String
+    }
+    
+    struct BanlistInfo: Codable {
+        var ban_tcg: String?
+        var ban_ocg: String?
+        var ban_goat: String?
     }
 
     struct CardImage: Codable {
