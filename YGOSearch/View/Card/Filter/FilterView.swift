@@ -17,10 +17,6 @@ struct FilterView: View {
     @Binding var selectedLevels: Set<Int>
     @Binding var selectedLinkRatings: Set<Int>
     
-    @State private var showingTypeSheet = false
-    @State private var showingRaceSheet = false
-    
-    
     let cardTypes: [String] = [
         "Effect Monster", "Flip Effect Monster", "Gemini Monster", "Normal Monster",
         "Ritual Monster", "Spell Card", "Trap Card", "Fusion Monster", "Link Monster",
@@ -39,109 +35,19 @@ struct FilterView: View {
                 .bold()
                 .font(.largeTitle)
                 .frame(alignment: .top)
-                        
-            Text("Monster Race & Card Type")
-                .font(.headline)
-                .bold()
-                .padding()
             
-            HStack {
-                Button("Select Races") {
-                    showingRaceSheet = true
-                }
-                .padding(.bottom)
-                .padding(.trailing)
-                .sheet(isPresented: $showingRaceSheet) {
-                    SelectionSheet(selectedItems: $selectedRaces, items: races, title: "Races")
-                }
-                Button("Select Types") {
-                    showingTypeSheet = true
-                }
-                .padding(.bottom)
-                .padding(.leading)
-                .sheet(isPresented: $showingTypeSheet) {
-                    SelectionSheet(selectedItems: $selectedTypes, items: cardTypes, title: "Card Types")
-                }
-            }
-                        
-            Text("Monster Attack & Defense")
-                .bold()
-            VStack {
-                HStack {
-                    TextField("ATK", text: $attackValue)
-                        .keyboardType(.numberPad)
-                        .padding(.leading)
-                    Picker("Condition", selection: $attackCondition) {
-                        Text("<").tag("<")
-                        Text("=").tag("=")
-                        Text(">").tag(">")
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                }
-                .padding()
-                
-                HStack {
-                    TextField("DEF", text: $defenseValue)
-                        .keyboardType(.numberPad)
-                        .padding(.leading)
-                    Picker("Condition", selection: $defenseCondition) {
-                        Text("<").tag("<")
-                        Text("=").tag("=")
-                        Text(">").tag(">")
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                }
-                .padding()
-            }
+            TypeRaceSelectionView(selectedTypes: $selectedTypes, selectedRaces: $selectedRaces, cardTypes: cardTypes, races: races)
+            
+            AttackDefenseInputView(attackValue: $attackValue, defenseValue: $defenseValue, attackCondition: $attackCondition, defenseCondition: $defenseCondition)
             
             Divider()
             
-            Text("Monster Level & Link Rating")
-                .bold()
-            
-            VStack(alignment: .leading) {
-                Text("Select Levels")
-                    .font(.subheadline)
-                HStack {
-                    ForEach(1...12, id: \.self) { number in
-                        NumberSelectButton(number: number, selectedNumbers: $selectedLevels)
-                    }
-                }
-                
-                Text("Select Link Ratings")
-                    .font(.subheadline)
-                HStack {
-                    ForEach(1...6, id: \.self) { number in
-                        NumberSelectButton(number: number, selectedNumbers: $selectedLinkRatings)
-                    }
-                }
-            }
+            LevelLinkSelectionView(selectedLevels: $selectedLevels, selectedLinkRatings: $selectedLinkRatings)
             
             Divider()
+            
+            ActionButtonsView(onApply: onApply, onClose: onClose)
         }
         .padding(.bottom)
-                
-        HStack {
-            Button("Reset") {
-                onClose()
-            }
-            .adjustableFontSize()
-            .padding()
-            .bold()
-            .foregroundColor(.white)
-            .background(Color.red)
-            .cornerRadius(10)
-            
-            Button("Apply") {
-                onApply()
-            }
-            .adjustableFontSize()
-            .padding()
-            .bold()
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(10)
-        }
     }
 }
-

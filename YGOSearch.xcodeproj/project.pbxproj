@@ -63,8 +63,12 @@
 				Card/Detail/CardShopView.swift,
 				Card/Detail/CardSummaryView.swift,
 				Card/Detail/CardTitleView.swift,
+				Card/Filter/ActionButtonsView.swift,
+				Card/Filter/AttackDefenseInputView.swift,
 				Card/Filter/FilterView.swift,
+				Card/Filter/LevelLinkSelectionView.swift,
 				Card/Filter/NumberSelectButton.swift,
+				Card/Filter/TypeRaceSelectionView.swift,
 				Card/Search/CardSearchView.swift,
 				Card/Search/ErrorBanner.swift,
 				Card/Search/SearchTextField.swift,
@@ -73,7 +77,10 @@
 				Colors.swift,
 				Favorites/FavoritesView.swift,
 				Favorites/ImageLoader.swift,
+				"Main Menu/EfeDemir.swift",
+				"Main Menu/Logo.swift",
 				"Main Menu/MainMenuView.swift",
+				"Main Menu/ygotheme.mp3",
 				Settings/SettingsView.swift,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;

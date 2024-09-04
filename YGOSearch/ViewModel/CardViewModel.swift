@@ -107,11 +107,11 @@ class CardViewModel: ObservableObject {
         if !selectedTypes.isEmpty && !selectedTypes.contains(card.type) {
             return false
         }
-
+        
         if !selectedRaces.isEmpty && !selectedRaces.contains(card.race) {
             return false
         }
-
+        
         if !attackValue.isEmpty && card.type.contains("Monster") {
             guard let atk = card.atk, atk != -1 else { return false }
             let attackValueInt = Int(attackValue) ?? 0
@@ -124,7 +124,7 @@ class CardViewModel: ObservableObject {
         } else if !attackValue.isEmpty {
             return false
         }
-
+        
         if !defenseValue.isEmpty && card.type.contains("Monster") && !card.type.contains("Link") {
             guard let def = card.def, def != -1 else { return false }
             let defenseValueInt = Int(defenseValue) ?? 0
@@ -137,11 +137,11 @@ class CardViewModel: ObservableObject {
         } else if !defenseValue.isEmpty {
             return false
         }
-
+        
         let levelMatches = selectedLevels.isEmpty || (card.type.contains("Monster") && card.level.map(selectedLevels.contains) == true)
         
         let linkRatingMatches = selectedLinkRatings.isEmpty || (card.type == "Link Monster" && card.linkval.map(selectedLinkRatings.contains) == true)
-
+        
         return (selectedLevels.isEmpty || levelMatches) && (selectedLinkRatings.isEmpty || linkRatingMatches)
     }
 }
