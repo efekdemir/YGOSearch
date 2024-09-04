@@ -25,8 +25,7 @@ struct CardDetailView: View {
                 Text("Swipe to see alternate arts. Tap to view full size.")
                     .font(.footnote)
                 
-                CardSummaryView(type: card.type, frameType: card.frameType, race: card.race, atk: card.atk, def: card.def, level: card.level,
-                                linkval: card.linkval, archetype: card.archetype, attribute: card.attribute)
+                CardSummaryView(type: card.type, frameType: card.frameType, race: card.race, atk: card.atk, def: card.def, level: card.level, linkval: card.linkval, archetype: card.archetype, attribute: card.attribute, banlistInfo: card.banlist_info)
                 
                 CardDescriptionView(text: card.desc)
                 
