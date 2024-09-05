@@ -14,6 +14,7 @@ class CardViewModel: ObservableObject {
     @Published var showError: Bool = false
     @Published var selectedTypes: Set<String> = []
     @Published var selectedRaces: Set<String> = []
+    @Published var selectedSpellTraps: Set<String> = []
     @Published var selectedLevels: Set<Int> = []
     @Published var selectedLinkRatings: Set<Int> = []
     @Published var attackValue: String = ""
@@ -51,6 +52,7 @@ class CardViewModel: ObservableObject {
             searchTerm.count >= 2,
             !selectedTypes.isEmpty,
             !selectedRaces.isEmpty,
+            !selectedSpellTraps.isEmpty,
             !selectedLevels.isEmpty,
             !selectedLinkRatings.isEmpty,
             !attackValue.isEmpty,
@@ -109,6 +111,10 @@ class CardViewModel: ObservableObject {
         }
         
         if !selectedRaces.isEmpty && !selectedRaces.contains(card.race) {
+            return false
+        }
+        
+        if !selectedSpellTraps.isEmpty && !selectedSpellTraps.contains(card.humanReadableCardType) {
             return false
         }
         
