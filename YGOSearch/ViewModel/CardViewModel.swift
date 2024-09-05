@@ -14,6 +14,7 @@ class CardViewModel: ObservableObject {
     @Published var showError: Bool = false
     @Published var selectedTypes: Set<String> = []
     @Published var selectedRaces: Set<String> = []
+    @Published var selectedSpellTraps: Set<String> = []
     @Published var selectedLevels: Set<Int> = []
     @Published var selectedLinkRatings: Set<Int> = []
     @Published var attackValue: String = ""
@@ -51,6 +52,7 @@ class CardViewModel: ObservableObject {
             searchTerm.count >= 2,
             !selectedTypes.isEmpty,
             !selectedRaces.isEmpty,
+            !selectedSpellTraps.isEmpty,
             !selectedLevels.isEmpty,
             !selectedLinkRatings.isEmpty,
             !attackValue.isEmpty,
@@ -112,6 +114,10 @@ class CardViewModel: ObservableObject {
             return false
         }
         
+        if !selectedSpellTraps.isEmpty && !selectedSpellTraps.contains(card.humanReadableCardType) {
+            return false
+        }
+        
         if !attackValue.isEmpty && card.type.contains("Monster") {
             guard let atk = card.atk, atk != -1 else { return false }
             let attackValueInt = Int(attackValue) ?? 0
@@ -145,93 +151,3 @@ class CardViewModel: ObservableObject {
         return (selectedLevels.isEmpty || levelMatches) && (selectedLinkRatings.isEmpty || linkRatingMatches)
     }
 }
-
-
-// this one also accounts for selecting link rating and levels combined but is messier
-//    func matchesFilters(card: CardModel) -> Bool {
-//        var matches = true
-//        var levelMatches = false
-//        var linkRatingMatches = false
-//
-//        if !selectedTypes.isEmpty && !selectedTypes.contains(card.type) {
-//            matches = false
-//        }
-//
-//        if !attackValue.isEmpty {
-//            if card.type.contains("Monster") {
-//                if let atk = card.atk {
-//                    if atk != -1  {
-//                        switch attackCondition {
-//                        case ">":
-//                            matches = matches && atk > Int(attackValue) ?? 0
-//                        case "<":
-//                            matches = matches && atk < Int(attackValue) ?? 0
-//                        case "=":
-//                            matches = matches && atk == Int(attackValue) ?? 0
-//                        default:
-//                            break
-//                        }
-//                    }
-//                }
-//            } else {
-//                matches = false
-//            }
-//        }
-//
-//        if !defenseValue.isEmpty {
-//            if card.type.contains("Monster") && !card.type.contains("Link") {
-//                if let def = card.def {
-//                    if def != -1  {
-//                        switch defenseCondition {
-//                        case ">":
-//                            matches = matches && def > Int(defenseValue) ?? 0
-//                        case "<":
-//                            matches = matches && def < Int(defenseValue) ?? 0
-//                        case "=":
-//                            matches = matches && def == Int(defenseValue) ?? 0
-//                        default:
-//                            break
-//                        }
-//                    } else {
-//                        matches = false
-//                    }
-//                }
-//            } else {
-//                matches = false
-//            }
-//        }
-//
-//        if !selectedLevels.isEmpty {
-//            if card.type.contains("Monster"), let level = card.level {
-//                levelMatches = selectedLevels.contains(level)
-//            } else {
-//                matches = false
-//            }
-//        } else {
-//            levelMatches = true
-//        }
-//
-//        if !selectedLinkRatings.isEmpty {
-//            if card.type == "Link Monster", let linkRating = card.linkval {
-//                linkRatingMatches = selectedLinkRatings.contains(linkRating)
-//            } else {
-//                matches = false
-//            }
-//        } else {
-//            linkRatingMatches = true
-//        }
-//
-//        if !selectedRaces.isEmpty && !selectedRaces.contains(card.race) {
-//            matches = false
-//        }
-//
-//        if !selectedLevels.isEmpty && !selectedLinkRatings.isEmpty && !attackValue.isEmpty {
-//            return matches && (levelMatches || linkRatingMatches)
-//        }
-//
-//        if !selectedLevels.isEmpty && !selectedLinkRatings.isEmpty {
-//            return levelMatches || linkRatingMatches
-//        } else {
-//            return matches && levelMatches && linkRatingMatches
-//        }
-//    }

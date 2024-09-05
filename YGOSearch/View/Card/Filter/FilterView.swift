@@ -10,6 +10,7 @@ import SwiftUI
 struct FilterView: View {
     @Binding var selectedTypes: Set<String>
     @Binding var selectedRaces: Set<String>
+    @Binding var selectedSpellTraps: Set<String>
     @Binding var attackValue: String
     @Binding var defenseValue: String
     @Binding var attackCondition: String
@@ -25,6 +26,8 @@ struct FilterView: View {
     
     let races: [String] = ["Aqua", "Beast", "Beast-Warrior", "Creator God", "Cyberse", "Dinosaur", "Divine-Beast", "Dragon", "Fairy", "Fiend", "Fish", "Insect", "Illusion", "Machine", "Plant", "Psychic", "Pyro", "Reptile", "Rock", "Sea Serpent", "Spellcaster", "Thunder", "Warrior", "Winged Beast", "Wyrm", "Zombie"]
     
+    let spellTrapTypes: [String] = ["Normal Spell", "Continuous Spell", "Equip Spell", "Quick-Play Spell", "Field Spell", "Ritual Spell", "Normal Trap", "Continuous Trap", "Counter Trap"]
+    
     var onApply: () -> Void
     var onClose: () -> Void
     
@@ -36,15 +39,20 @@ struct FilterView: View {
                 .font(.largeTitle)
                 .frame(alignment: .top)
             
-            TypeRaceSelectionView(selectedTypes: $selectedTypes, selectedRaces: $selectedRaces, cardTypes: cardTypes, races: races)
+            CardSelectionView(selectedTypes: $selectedTypes, selectedRaces: $selectedRaces, selectedSpellTraps: $selectedSpellTraps, cardTypes: cardTypes, spellTrapTypes: spellTrapTypes, races: races)
+            
+            Divider()
+                .padding()
             
             AttackDefenseInputView(attackValue: $attackValue, defenseValue: $defenseValue, attackCondition: $attackCondition, defenseCondition: $defenseCondition)
             
             Divider()
+                .padding()
             
             LevelLinkSelectionView(selectedLevels: $selectedLevels, selectedLinkRatings: $selectedLinkRatings)
             
             Divider()
+                .padding()
             
             ActionButtonsView(onApply: onApply, onClose: onClose)
         }

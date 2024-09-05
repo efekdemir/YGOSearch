@@ -13,11 +13,15 @@ struct SelectionSheet: View {
     
     let items: [String]
     var title: String
-
+    
+    private var maxItemWidth: CGFloat {
+        maxWidthOfItems(items: items, font: UIFont.systemFont(ofSize: 17))
+    }
+    
     var body: some View {
         NavigationView {
-            let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-
+            let columns = [GridItem(.adaptive(minimum: maxItemWidth))]
+            
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(items, id: \.self) { item in
@@ -30,7 +34,7 @@ struct SelectionSheet: View {
                         }) {
                             Text(item)
                                 .padding()
-                                .frame(maxWidth: .infinity)
+                                .frame(minWidth: maxItemWidth, idealWidth: maxItemWidth, maxWidth: .infinity)
                                 .foregroundColor(selectedItems.contains(item) ? .white : .black)
                                 .background(selectedItems.contains(item) ? Color.blue : Color.gray)
                                 .cornerRadius(10)
@@ -45,4 +49,15 @@ struct SelectionSheet: View {
             })
         }
     }
+}
+
+func widthOfString(_ string: String, font: UIFont) -> CGFloat {
+    let attributes = [NSAttributedString.Key.font: font]
+    return string.size(withAttributes: attributes).width
+}
+
+func maxWidthOfItems(items: [String], font: UIFont) -> CGFloat {
+    let widths = items.map { widthOfString($0, font: font) }
+    guard let max = widths.max() else { return 100 }
+    return max + 20
 }

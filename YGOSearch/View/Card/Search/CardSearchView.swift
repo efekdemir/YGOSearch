@@ -41,7 +41,9 @@ struct CardSearchView: View {
             .sheet(isPresented: $showingFilter) {
                 FilterView(
                     selectedTypes: $viewModel.selectedTypes,
-                    selectedRaces: $viewModel.selectedRaces, attackValue: $viewModel.attackValue,
+                    selectedRaces: $viewModel.selectedRaces, 
+                    selectedSpellTraps: $viewModel.selectedSpellTraps,
+                    attackValue: $viewModel.attackValue,
                     defenseValue: $viewModel.defenseValue,
                     attackCondition: $viewModel.attackCondition,
                     defenseCondition: $viewModel.defenseCondition,

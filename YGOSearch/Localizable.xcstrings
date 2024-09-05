@@ -239,6 +239,9 @@
         }
       }
     },
+    "Card Types" : {
+
+    },
     "Condition" : {
 
     },
@@ -279,9 +282,6 @@
           }
         }
       }
-    },
-    "Created by Efe Demir using YGOPRODeck API" : {
-
     },
     "Dark Mode" : {
       "extractionState" : "manual",
@@ -358,6 +358,9 @@
           }
         }
       }
+    },
+    "Filter by" : {
+
     },
     "Filter by Type" : {
       "extractionState" : "manual",
@@ -543,7 +546,7 @@
     "Monster Attack & Defense" : {
 
     },
-    "Monster Race & Card Type" : {
+    "Monster Races" : {
 
     },
     "Other Settings" : {
@@ -692,12 +695,6 @@
     "Select Link Ratings" : {
 
     },
-    "Select Races" : {
-
-    },
-    "Select Types" : {
-
-    },
     "Settings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -732,6 +729,9 @@
           }
         }
       }
+    },
+    "Spells & Traps" : {
+
     },
     "Swipe to see alternate arts. Tap to view full size." : {
       "extractionState" : "manual",

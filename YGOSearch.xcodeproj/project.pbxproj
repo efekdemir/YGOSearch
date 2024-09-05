@@ -65,10 +65,10 @@
 				Card/Detail/CardTitleView.swift,
 				Card/Filter/ActionButtonsView.swift,
 				Card/Filter/AttackDefenseInputView.swift,
+				Card/Filter/CardSelectionView.swift,
 				Card/Filter/FilterView.swift,
 				Card/Filter/LevelLinkSelectionView.swift,
 				Card/Filter/NumberSelectButton.swift,
-				Card/Filter/TypeRaceSelectionView.swift,
 				Card/Search/CardSearchView.swift,
 				Card/Search/ErrorBanner.swift,
 				Card/Search/SearchTextField.swift,
@@ -490,7 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YGOSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = YFC6V8ZQ63;
+				DEVELOPMENT_TEAM = H4YZ2575CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "YGO Search";
@@ -521,7 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YGOSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = YFC6V8ZQ63;
+				DEVELOPMENT_TEAM = H4YZ2575CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "YGO Search";

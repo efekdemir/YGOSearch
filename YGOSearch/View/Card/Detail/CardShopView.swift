@@ -46,7 +46,7 @@ struct CardShopView: View {
 
 struct CardShopView_Previews: PreviewProvider {
     static var previews: some View {
-        let exampleCard = CardModel(id: 1, name: "Blue-Eyes White Dragon", type: "Monster", frameType: "Normal", desc: "This legendary dragon is a powerful engine of destruction.", atk: 3000, def: 2500, level: 8, linkval: nil, race: "Dragon", attribute: "Light", archetype: "Blue-Eyes", ygoprodeck_url: nil, card_sets: nil, card_images: [], card_prices: [
+        let exampleCard = CardModel(id: 1, name: "Blue-Eyes White Dragon", type: "Monster", humanReadableCardType: "Normal Monster", frameType: "Normal", desc: "This legendary dragon is a powerful engine of destruction.", atk: 3000, def: 2500, level: 8, linkval: nil, race: "Dragon", attribute: "Light", archetype: "Blue-Eyes", ygoprodeck_url: nil, card_sets: nil, card_images: [], card_prices: [
             CardModel.CardPrice(cardmarket_price: "30.00", tcgplayer_price: "25.00", ebay_price: "35.00", amazon_price: "28.00", coolstuffinc_price: "32.00")
         ])
         CardShopView(card: exampleCard)
