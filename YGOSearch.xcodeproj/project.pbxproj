@@ -13,6 +13,7 @@
 		B453291C2A9CBA5B006584AA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453291B2A9CBA5B006584AA /* APIService.swift */; };
 		B457D3A62C2A5F65002C004D /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A52C2A5F65002C004D /* APIServiceTests.swift */; };
 		B457D3A82C2A654D002C004D /* CardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B457D3A72C2A654D002C004D /* CardViewModelTests.swift */; };
+		B482AF1F2C8A74B6002D43F8 /* AnimatedGradient in Frameworks */ = {isa = PBXBuildFile; productRef = B482AF1E2C8A74B6002D43F8 /* AnimatedGradient */; };
 		B4E264232C757E580012B896 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B4E264222C757E580012B896 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 				Colors.swift,
 				Favorites/FavoritesView.swift,
 				Favorites/ImageLoader.swift,
+				GlowBorder.swift,
 				"Main Menu/EfeDemir.swift",
 				"Main Menu/Logo.swift",
 				"Main Menu/MainMenuView.swift",
@@ -120,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B482AF1F2C8A74B6002D43F8 /* AnimatedGradient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +211,9 @@
 			dependencies = (
 			);
 			name = YGOSearch;
+			packageProductDependencies = (
+				B482AF1E2C8A74B6002D43F8 /* AnimatedGradient */,
+			);
 			productName = "Master Duel Meta Mobile";
 			productReference = B45328EC2A9CB90F006584AA /* YGOSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +290,9 @@
 				it,
 			);
 			mainGroup = B45328E32A9CB90F006584AA;
+			packageReferences = (
+				B482AF1D2C8A74B6002D43F8 /* XCRemoteSwiftPackageReference "AnimatedGradient" */,
+			);
 			productRefGroup = B45328ED2A9CB90F006584AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -652,6 +661,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B482AF1D2C8A74B6002D43F8 /* XCRemoteSwiftPackageReference "AnimatedGradient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/AnimatedGradient.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B482AF1E2C8A74B6002D43F8 /* AnimatedGradient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B482AF1D2C8A74B6002D43F8 /* XCRemoteSwiftPackageReference "AnimatedGradient" */;
+			productName = AnimatedGradient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B45328E42A9CB90F006584AA /* Project object */;
 }
