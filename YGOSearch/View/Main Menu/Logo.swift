@@ -11,13 +11,14 @@ import AVFoundation
 struct Logo: View {
     @State private var flipped = false
     @State private var isAnimating = false
+    @State private var isPlayingOST = false
     @State private var audioPlayer: AVAudioPlayer?
 
     var body: some View {
         Image("ygo")
             .resizable()
             .scaledToFit()
-            .shadow(color: .blue.opacity(0.7), radius: isAnimating ? 30 : 10, x: 0, y: 0)
+            .shadow(color: .yellow.opacity(0.7), radius: isAnimating ? 30 : 10, x: 0, y: 0)
             .rotation3DEffect(
                 .degrees(flipped ? 180 : 0),
                 axis: (x: 0, y: 1, z: 0)
@@ -34,9 +35,10 @@ struct Logo: View {
                 }
             }
             .onLongPressGesture(minimumDuration: 0.5, perform: {
-                playSound(soundName: "ygotheme")
-            }, onPressingChanged: { inProgress in
-                if !inProgress {
+                isPlayingOST.toggle()
+                if isPlayingOST {
+                    playSound(soundName: "ygotheme")
+                } else {
                     stopSound()
                 }
             })

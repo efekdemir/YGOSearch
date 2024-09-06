@@ -22,7 +22,10 @@ struct MainMenuView: View {
                         
                         Text("Created by Efe Demir")
                             .frame(width: geometry.size.width, alignment: .center)
-                            .font(.footnote)
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                            .bold()
+                            .glowBorder(color: .black, lineWidth: 2)
                             .padding(.bottom, geometry.safeAreaInsets.bottom)
                             .onTapGesture(count: 2) {
                                 self.showEasterEgg.toggle()
