@@ -76,6 +76,12 @@ struct CardSummaryView: View {
         .frame(maxWidth: .infinity)
         .background(backgroundColor)
         .foregroundColor(frameType == "synchro" || frameType == "normal" ? .black : .white)
+        .overlay(frameType == "synchro" ?
+                 RoundedRectangle(cornerRadius: 10)
+            .stroke(.black, lineWidth: 4) :
+                    RoundedRectangle(cornerRadius: 10)
+            .stroke(.clear)
+        )
         .cornerRadius(10)
         .padding()
     }
