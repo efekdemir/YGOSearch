@@ -18,7 +18,7 @@ struct CardDescriptionView: View {
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(10)
-            .padding()
+            .padding(.horizontal)
     }
 }
 

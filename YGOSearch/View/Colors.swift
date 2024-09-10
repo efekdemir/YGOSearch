@@ -24,15 +24,15 @@ enum FrameType: String {
 
 
 let frameSummaryColors: [FrameType: Color] = [
-    .effectMonster: Color(.orange),
+    .effectMonster: Color(.systemOrange),
     .normalMonster: Color(.systemYellow),
     .pendulum: Color(.systemCyan),
-    .spell: Color(.green),
+    .spell: Color(.systemGreen),
     .ritualMonster: Color(.systemMint),
     .linkMonster: Color(.systemIndigo),
-    .fusionMonster: Color(.purple),
-    .trap: Color(.red),
+    .fusionMonster: Color(.systemPurple),
+    .trap: Color(.systemRed),
     .synchroMonster: Color(.white),
-    .token: Color(.gray),
+    .token: Color(.systemGray),
     .xyzMonster: Color(.black)
 ]
