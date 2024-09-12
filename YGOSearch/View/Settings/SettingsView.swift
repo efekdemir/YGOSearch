@@ -11,6 +11,7 @@ struct SettingsView: View {
     @AppStorage("fontSize") private var fontSize = 14.0
     @AppStorage("selectedLanguage") private var selectedLanguage = "en"
     
+    private let version = "1.0.0"
     private let languages = ["English": "en", "French": "fr", "German": "de", "Italian": "it", "Portuguese": "pt"]
     private var languageNames: [String] {
         Array(languages.keys).sorted()
@@ -48,7 +49,7 @@ struct SettingsView: View {
                 
                 Section(header: Text("Other Settings")
                     .adjustableFontSize()) {
-                        Text("Version: 1.0.0")
+                        Text("Version: \(version)")
                             .adjustableFontSize()
                     }
             }

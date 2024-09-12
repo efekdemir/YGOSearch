@@ -1570,7 +1570,11 @@
         }
       }
     },
+    "Version: %@" : {
+
+    },
     "Version: 1.0.0" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
