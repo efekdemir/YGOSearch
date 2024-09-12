@@ -1157,6 +1157,34 @@
         }
       }
     },
+    "Monster Attributes" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monsterattribute"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attributs du Monstre"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attributi del Mostro"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atributos do Monstro"
+          }
+        }
+      }
+    },
     "Monster Races" : {
       "localizations" : {
         "de" : {

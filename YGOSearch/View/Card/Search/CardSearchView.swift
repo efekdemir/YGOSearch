@@ -40,8 +40,9 @@ struct CardSearchView: View {
             .navigationBarTitle("Search Menu", displayMode: .inline)
             .sheet(isPresented: $showingFilter) {
                 FilterView(
+                    selectedAttributes: $viewModel.selectedAttributes,
                     selectedTypes: $viewModel.selectedTypes,
-                    selectedRaces: $viewModel.selectedRaces, 
+                    selectedRaces: $viewModel.selectedRaces,
                     selectedSpellTraps: $viewModel.selectedSpellTraps,
                     attackValue: $viewModel.attackValue,
                     defenseValue: $viewModel.defenseValue,
