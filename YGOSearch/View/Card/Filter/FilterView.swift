@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FilterView: View {
+    @Binding var selectedAttributes: Set<String>
     @Binding var selectedTypes: Set<String>
     @Binding var selectedRaces: Set<String>
     @Binding var selectedSpellTraps: Set<String>
@@ -17,6 +18,8 @@ struct FilterView: View {
     @Binding var defenseCondition: String
     @Binding var selectedLevels: Set<Int>
     @Binding var selectedLinkRatings: Set<Int>
+    
+    let attributes: [String] = ["DARK", "DIVINE", "EARTH", "FIRE", "LIGHT", "WATER", "WIND"]
     
     let cardTypes: [String] = [
         "Effect Monster", "Flip Effect Monster", "Gemini Monster", "Normal Monster",
@@ -39,7 +42,7 @@ struct FilterView: View {
                 .font(.largeTitle)
                 .frame(alignment: .top)
             
-            CardSelectionView(selectedTypes: $selectedTypes, selectedRaces: $selectedRaces, selectedSpellTraps: $selectedSpellTraps, cardTypes: cardTypes, spellTrapTypes: spellTrapTypes, races: races)
+            CardSelectionView(selectedAttributes: $selectedAttributes, selectedTypes: $selectedTypes, selectedRaces: $selectedRaces, selectedSpellTraps: $selectedSpellTraps, attributes: attributes, cardTypes: cardTypes, spellTrapTypes: spellTrapTypes, races: races)
             
             Divider()
                 .padding()

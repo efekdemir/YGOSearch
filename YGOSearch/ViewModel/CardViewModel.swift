@@ -12,6 +12,7 @@ class CardViewModel: ObservableObject {
     @Published var cards: [CardModel] = []
     @Published var errorMessage: String?
     @Published var showError: Bool = false
+    @Published var selectedAttributes: Set<String> = []
     @Published var selectedTypes: Set<String> = []
     @Published var selectedRaces: Set<String> = []
     @Published var selectedSpellTraps: Set<String> = []
@@ -50,6 +51,7 @@ class CardViewModel: ObservableObject {
     func loadCardsData(_ searchTerm: String) {
         let filterConditions: [Bool] = [
             searchTerm.count >= 2,
+            !selectedAttributes.isEmpty,
             !selectedTypes.isEmpty,
             !selectedRaces.isEmpty,
             !selectedSpellTraps.isEmpty,
@@ -94,6 +96,7 @@ class CardViewModel: ObservableObject {
     }
     
     func resetFilters() {
+        selectedAttributes.removeAll()
         selectedTypes.removeAll()
         selectedRaces.removeAll()
         attackValue = ""
@@ -115,6 +118,15 @@ class CardViewModel: ObservableObject {
         }
         
         if !selectedSpellTraps.isEmpty && !selectedSpellTraps.contains(card.humanReadableCardType) {
+            return false
+        }
+        
+        if !selectedAttributes.isEmpty && card.type.contains("Monster") {
+            guard let attribute = card.attribute else { return false }
+            if !selectedAttributes.contains(attribute) {
+                return false
+            }
+        } else if !selectedAttributes.isEmpty {
             return false
         }
         
