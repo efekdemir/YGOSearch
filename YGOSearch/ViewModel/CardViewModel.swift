@@ -12,6 +12,7 @@ class CardViewModel: ObservableObject {
     @Published var cards: [CardModel] = []
     @Published var errorMessage: String?
     @Published var showError: Bool = false
+    @Published var isLoading: Bool = false
     @Published var selectedAttributes: Set<String> = []
     @Published var selectedTypes: Set<String> = []
     @Published var selectedRaces: Set<String> = []
@@ -32,8 +33,10 @@ class CardViewModel: ObservableObject {
     }
     
     func loadAllCards() {
+        self.isLoading = true
         apiService.fetchAllCards()
             .sink(receiveCompletion: { [weak self] completion in
+                self?.isLoading = false
                 switch completion {
                 case .finished:
                     break
@@ -68,6 +71,7 @@ class CardViewModel: ObservableObject {
             return
         }
         
+        self.isLoading = true
         var typeFilter: String? = nil
         if !selectedTypes.isEmpty {
             typeFilter = selectedTypes.joined(separator: ",")
@@ -82,6 +86,7 @@ class CardViewModel: ObservableObject {
             }
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
+                self?.isLoading = false
                 switch completion {
                 case .finished:
                     break

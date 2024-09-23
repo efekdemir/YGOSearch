@@ -401,6 +401,34 @@
         }
       }
     },
+    "Add your favorite cards to see them here." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fügen Sie Ihre Lieblingskarten hinzu, um sie hier anzuzeigen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez vos cartes préférées pour les voir ici."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi le tue carte preferite per vederle qui."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicione os seus cartões favoritos para os ver aqui."
+          }
+        }
+      }
+    },
     "API prices may not be up-to-date" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1094,6 +1122,34 @@
         }
       }
     },
+    "Loading..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laden..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chargement..."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caricamento..."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carregando..."
+          }
+        }
+      }
+    },
     "Main Menu" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1209,6 +1265,62 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Raças de Monstros"
+          }
+        }
+      }
+    },
+    "No cards found!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Karten gefunden!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune carte trouvée!"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuna carta trovata!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenhum cartão encontrado!"
+          }
+        }
+      }
+    },
+    "No favorites yet!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Favoriten!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore de favoris !"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessun preferito!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ainda não há favoritos!"
           }
         }
       }
@@ -1535,6 +1647,34 @@
         }
       }
     },
+    "Try searching with different keywords or adjust the filters." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versuchen Sie die Suche mit anderen Schlüsselwörtern oder passen Sie die Filter an."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essayez de rechercher avec des mots-clés différents ou ajustez les filtres."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova a cercare con parole chiave diverse o modifica i filtri."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tente pesquisar com palavras-chave diferentes ou ajuste os filtros."
+          }
+        }
+      }
+    },
     "Version:" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1571,33 +1711,29 @@
       }
     },
     "Version: %@" : {
-
-    },
-    "Version: 1.0.0" : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Version: 1.0.0"
+            "value" : "Version: %@"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Version: 1.0.0"
+            "value" : "Version: %@"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Versione: 1.0.0"
+            "value" : "Versione: %@"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Versão: 1.0.0"
+            "value" : "Versão: %@"
           }
         }
       }

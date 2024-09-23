@@ -33,8 +33,9 @@ struct SelectionSheet: View {
                             }
                         }) {
                             Text(item)
-                                .padding()
+                                .padding(.vertical)
                                 .frame(minWidth: maxItemWidth, idealWidth: maxItemWidth, maxWidth: .infinity)
+                                .lineLimit(1)
                                 .foregroundColor(selectedItems.contains(item) ? .white : .black)
                                 .background(selectedItems.contains(item) ? Color.blue : Color.gray)
                                 .cornerRadius(10)
