@@ -28,20 +28,19 @@ struct CardSearchView: View {
                     if viewModel.isLoading {
                         Spacer()
                         ProgressView("Loading...")
-                            .progressViewStyle(CircularProgressViewStyle())
+                            .progressViewStyle(.circular)
                             .padding()
                         Spacer()
                     } else if viewModel.cards.isEmpty && !viewModel.isLoading {
-                        emptyStateView
+                        EmptyCardsView()
                     } else {
                         List(viewModel.cards, id: \.id) { card in
                             NavigationLink(destination: CardDetailView(card: card)) {
                                 Text(card.name)
                                     .adjustableFontSize()
                             }
-                            .padding(.vertical, 4)
                         }
-                        .listStyle(PlainListStyle())
+                        .listStyle(.plain)
                     }
                     
                     if viewModel.showError {
@@ -82,28 +81,15 @@ struct CardSearchView: View {
                     Label("Favorites", systemImage: "heart")
                 }
             
+            BanlistView(viewModel: viewModel)
+                .tabItem {
+                    Label("Banlist", systemImage: "xmark.shield")
+                }
+            
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
         }
-    }
-    
-    var emptyStateView: some View {
-        VStack {
-            Spacer()
-            
-            Text("No cards found!")
-                .font(.title2)
-                .padding(.bottom, 10)
-            
-            Text("Try searching with different keywords or adjust the filters.")
-                .font(.body)
-                .foregroundColor(.gray)
-            
-            Spacer()
-        }
-        .multilineTextAlignment(.center)
-        .padding()
     }
 }

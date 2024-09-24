@@ -562,6 +562,9 @@
         }
       }
     },
+    "Banlist" : {
+
+    },
     "Card" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -996,6 +999,9 @@
         }
       }
     },
+    "GOAT: %@" : {
+
+    },
     "Hello, World!" : {
       "localizations" : {
         "de" : {
@@ -1325,6 +1331,32 @@
         }
       }
     },
+    "OCG: %@" : {
+
+    },
+    "OCG: %@, GOAT: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "OCG: %1$@, GOAT: %2$@"
+          }
+        }
+      }
+    },
+    "OCG/GOAT: %@" : {
+
+    },
+    "OCG/GOAT: %@, TCG: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "OCG/GOAT: %1$@, TCG: %2$@"
+          }
+        }
+      }
+    },
     "Other Settings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1464,6 +1496,12 @@
           }
         }
       }
+    },
+    "Select Banlist" : {
+
+    },
+    "Select Group" : {
+
     },
     "Select Levels" : {
       "localizations" : {
@@ -1619,6 +1657,68 @@
         }
       }
     },
+    "TCG: %@" : {
+
+    },
+    "TCG: %@, GOAT: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "TCG: %1$@, GOAT: %2$@"
+          }
+        }
+      }
+    },
+    "TCG: %@, OCG: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "TCG: %1$@, OCG: %2$@"
+          }
+        }
+      }
+    },
+    "TCG: %@, OCG: %@, GOAT: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "TCG: %1$@, OCG: %2$@, GOAT: %3$@"
+          }
+        }
+      }
+    },
+    "TCG/GOAT: %@" : {
+
+    },
+    "TCG/GOAT: %@, OCG: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "TCG/GOAT: %1$@, OCG: %2$@"
+          }
+        }
+      }
+    },
+    "TCG/OCG: %@" : {
+
+    },
+    "TCG/OCG: %@, GOAT: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "TCG/OCG: %1$@, GOAT: %2$@"
+          }
+        }
+      }
+    },
+    "TCG/OCG/GOAT: %@" : {
+
+    },
     "Thank you for downloading YGO Search!" : {
       "localizations" : {
         "de" : {
@@ -1674,6 +1774,9 @@
           }
         }
       }
+    },
+    "Unlimited" : {
+
     },
     "Version:" : {
       "extractionState" : "manual",

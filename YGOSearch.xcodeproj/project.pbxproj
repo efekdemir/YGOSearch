@@ -58,6 +58,8 @@
 		B447E6292C2B7BBB003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Banlist/BanlistView.swift,
+				Card/Detail/BanlistSummaryView.swift,
 				Card/Detail/CardDescriptionView.swift,
 				Card/Detail/CardDetailView.swift,
 				Card/Detail/CardImagesTabView.swift,
@@ -76,6 +78,7 @@
 				Card/Sheets/CardImageSheet.swift,
 				Card/Sheets/SelectionSheet.swift,
 				Colors.swift,
+				EmptyCardsView.swift,
 				Favorites/FavoritesView.swift,
 				Favorites/ImageLoader.swift,
 				GlowBorder.swift,

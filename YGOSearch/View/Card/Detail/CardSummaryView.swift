@@ -1,10 +1,3 @@
-//
-//  CardSummaryView.swift
-//  YGOSearch
-//
-//  Created by Efe Demir on 8/13/24.
-//
-
 import SwiftUI
 
 struct CardSummaryView: View {
@@ -28,12 +21,6 @@ struct CardSummaryView: View {
     
     var body: some View {
         VStack {
-            if let banlistInfo {
-                if let tcg = banlistInfo.ban_tcg {
-                    Text(tcg)
-                }
-            }
-            
             HStack {
                 Text(type)
                 Text("|")
@@ -69,6 +56,10 @@ struct CardSummaryView: View {
             }
             .lineLimit(1)
             .minimumScaleFactor(0.3)
+            
+            if let banlistInfo {
+                BanlistSummaryView(banlistInfo: banlistInfo)
+            }
         }
         .adjustableFontSize()
         .bold()
@@ -76,12 +67,9 @@ struct CardSummaryView: View {
         .frame(maxWidth: .infinity)
         .background(backgroundColor)
         .foregroundColor(frameType == "synchro" || frameType == "normal" ? .black : .white)
-        .overlay(frameType == "synchro" ?
-                 RoundedRectangle(cornerRadius: 10)
-            .stroke(.black, lineWidth: 4) :
-                    RoundedRectangle(cornerRadius: 10)
-            .stroke(.clear)
-        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(frameType == "xyz" ? Color.white : frameType == "synchro" ? Color.black : Color.clear, lineWidth: 4))
         .cornerRadius(10)
         .padding()
     }

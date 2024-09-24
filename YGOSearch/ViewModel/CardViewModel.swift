@@ -10,6 +10,7 @@ import Combine
 
 class CardViewModel: ObservableObject {
     @Published var cards: [CardModel] = []
+    @Published var banlistCards: [CardModel] = []
     @Published var errorMessage: String?
     @Published var showError: Bool = false
     @Published var isLoading: Bool = false
@@ -46,6 +47,25 @@ class CardViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] cards in
                 self?.cards = cards
+                self?.showError = false
+            })
+            .store(in: &cancellables)
+    }
+    
+    func loadBanlistCards(banlist: String) {
+        self.isLoading = true
+        apiService.fetchBanlistCards(for: banlist)
+            .sink(receiveCompletion: { [weak self] completion in
+                self?.isLoading = false
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self?.errorMessage = "Failed to load banlist cards: \(error.localizedDescription)"
+                    self?.showError = true
+                }
+            }, receiveValue: { [weak self] banlistCards in
+                self?.banlistCards = banlistCards
                 self?.showError = false
             })
             .store(in: &cancellables)
