@@ -13,7 +13,7 @@ struct CardTitleView: View {
     var body: some View {
         HStack {
             let length = card.name.count
-            if length > 35 {
+            if length > 40 {
                 Text(card.name)
                     .adjustableFontSize()
                     .font(.title)
@@ -40,6 +40,7 @@ struct CardTitleView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 13))
                             .bold()
+                            .glowBorder(color: .white, lineWidth: 2)
                         
                     }
                     .padding(.trailing)

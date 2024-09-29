@@ -11,6 +11,7 @@ import Combine
 protocol APIServiceProtocol {
     func fetchAllCards() -> AnyPublisher<[CardModel], Error>
     func fetchCardsDetails(for name: String, typeFilter: String?) -> AnyPublisher<[CardModel], Error>
+    func fetchBanlistCards(for banlist: String) -> AnyPublisher<[CardModel], Error>
 }
 
 class APIService: APIServiceProtocol {
@@ -54,6 +55,29 @@ class APIService: APIServiceProtocol {
         }
 
         urlComponents?.queryItems = queryItems
+        
+        guard let url = urlComponents?.url else {
+            fatalError("Invalid URL")
+        }
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map(\.data)
+            .decode(type: ApiResponse.self, decoder: JSONDecoder())
+            .map { $0.data }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+    
+    func fetchBanlistCards(for banlist: String) -> AnyPublisher<[CardModel], Error> {
+        var urlComponents = URLComponents(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php")
+        
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "banlist", value: banlist)
+        ]
+        
+        if selectedLanguage != "en" {
+            urlComponents?.queryItems?.append(URLQueryItem(name: "language", value: selectedLanguage))
+        }
         
         guard let url = urlComponents?.url else {
             fatalError("Invalid URL")

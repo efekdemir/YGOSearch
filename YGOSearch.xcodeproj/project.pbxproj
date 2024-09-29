@@ -58,6 +58,8 @@
 		B447E6292C2B7BBB003998B3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Banlist/BanlistView.swift,
+				Card/Detail/BanlistSummaryView.swift,
 				Card/Detail/CardDescriptionView.swift,
 				Card/Detail/CardDetailView.swift,
 				Card/Detail/CardImagesTabView.swift,
@@ -74,16 +76,17 @@
 				Card/Search/ErrorBanner.swift,
 				Card/Search/SearchTextField.swift,
 				Card/Sheets/CardImageSheet.swift,
+				Card/Sheets/HelpSheet.swift,
 				Card/Sheets/SelectionSheet.swift,
 				Colors.swift,
+				EmptyCardsView.swift,
 				Favorites/FavoritesView.swift,
 				Favorites/ImageLoader.swift,
 				GlowBorder.swift,
-				"Main Menu/EfeDemir.swift",
-				"Main Menu/Logo.swift",
-				"Main Menu/MainMenuView.swift",
-				"Main Menu/ygotheme.mp3",
+				Settings/EfeDemir.swift,
+				Settings/Logo.swift,
 				Settings/SettingsView.swift,
+				Settings/winning.mp3,
 			);
 			target = B45328EB2A9CB90F006584AA /* YGOSearch */;
 		};
@@ -512,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.YGOSearch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -546,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Efe-Demir.YGOSearch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

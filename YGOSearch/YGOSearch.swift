@@ -11,7 +11,7 @@ import SwiftUI
 struct YGOSearch: App {
     var body: some Scene {
         WindowGroup {
-            MainMenuView()
+            CardSearchView()
         }
     }
 }

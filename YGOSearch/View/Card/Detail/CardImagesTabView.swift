@@ -45,6 +45,6 @@ struct CardImagesTabView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        .frame(height: cardImages.count > 0 && card.type.contains("Pendulum Effect Monster") ? 500 : 400)
+        .frame(height: cardImages.count > 0 && card.type.contains("Pendulum Effect Monster") || card.type.contains("Pendulum Normal Monster") ? 500 : 400)
     }
 }
