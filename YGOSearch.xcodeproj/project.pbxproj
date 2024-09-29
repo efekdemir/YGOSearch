@@ -76,6 +76,7 @@
 				Card/Search/ErrorBanner.swift,
 				Card/Search/SearchTextField.swift,
 				Card/Sheets/CardImageSheet.swift,
+				Card/Sheets/HelpSheet.swift,
 				Card/Sheets/SelectionSheet.swift,
 				Colors.swift,
 				EmptyCardsView.swift,

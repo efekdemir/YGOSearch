@@ -12,6 +12,7 @@ struct SettingsView: View {
     @AppStorage("selectedLanguage") private var selectedLanguage = "en"
     
     @State private var showEasterEgg = false
+    @State private var showOnboarding = false
     
     private let version = "1.1.0"
     private let languages = ["English": "en", "French": "fr", "German": "de", "Italian": "it", "Portuguese": "pt"]
@@ -55,6 +56,13 @@ struct SettingsView: View {
                             .adjustableFontSize()) {
                                 Text("Version: \(version)")
                                     .adjustableFontSize()
+                                
+                                Button(action: {
+                                    showOnboarding = true
+                                }) {
+                                    Text("Help")
+                                        .adjustableFontSize()
+                                }
                             }
                         
                         Section(header: Text("Created by Efe Demir")
@@ -65,6 +73,9 @@ struct SettingsView: View {
                                 Logo()
                                     .scaledToFit()
                             }
+                    }
+                    .sheet(isPresented: $showOnboarding) {
+                        HelpSheet()
                     }
                     .sheet(isPresented: $showEasterEgg) {
                         EfeDemir()

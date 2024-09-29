@@ -684,6 +684,9 @@
         }
       }
     },
+    "Close" : {
+
+    },
     "Condition" : {
       "localizations" : {
         "de" : {
@@ -1030,6 +1033,9 @@
         }
       }
     },
+    "Help" : {
+
+    },
     "Home" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1274,6 +1280,9 @@
           }
         }
       }
+    },
+    "Next" : {
+
     },
     "No cards found!" : {
       "localizations" : {

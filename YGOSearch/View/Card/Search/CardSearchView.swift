@@ -10,6 +10,8 @@ struct CardSearchView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel = CardViewModel()
     
+    @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "hasSeenOnboarding")
+    
     @State private var searchText = ""
     @State private var showingFilter = false
     
@@ -90,6 +92,11 @@ struct CardSearchView: View {
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
+        }
+        .sheet(isPresented: $showOnboarding, onDismiss: {
+            UserDefaults.standard.set(true, forKey: "hasSeenOnboarding")
+        }) {
+            HelpSheet()
         }
     }
 }
